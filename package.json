@@ -1,0 +1,44 @@
+{
+  "name": "bloc-utils",
+  "description": "Utilities for building applications with the BLoC pattern",
+  "license": "MIT",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "yarn build-dist && yarn build-readme",
+    "clean": "rm *.d.ts *.js *.map react/* jest/*",
+    "build-dist": "yarn clean && tsc --outDir ./",
+    "build-readme": "typedoc --theme markdown --mode file --hideGenerator --excludeNotExported --excludePrivate --excludeExternals --out ./docs ./src"
+  },
+  "main": "index.js",
+  "author": {
+    "email": "cole@colelawrence.com",
+    "name": "Cole Lawrence"
+  },
+  "keywords": [
+    "frp",
+    "bloc",
+    "business logic",
+    "state",
+    "state management",
+    "typescript",
+    "rxjs",
+    "jest",
+    "react"
+  ],
+  "optionalDependencies": {
+    "react": "^16",
+    "jest": "*"
+  },
+  "peerDependencies": {
+    "rxjs": "^6"
+  },
+  "devDependencies": {
+    "jest": "^24",
+    "react": "^16",
+    "rxjs": "^6",
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-internal-external": "^2.0.2",
+    "typedoc-plugin-markdown": "^2.1.10",
+    "typescript": "^3.6.2"
+  }
+}
