@@ -2,9 +2,36 @@
 
 [Globals](../globals.md) › [Observer](observer.md)
 
-# Class: Observer <**T, SS**>
+# Class: Observer <**T, T, SS**>
 
 Observer builds itself based on the latest value emitted by an Observable.
+Observer builds itself based on the latest value emitted by an Observable.
+
+Example:
+
+```jsx
+   <Observer
+     of={bloc.$places}
+     next={places => (
+       places.map(place =>
+         <li>
+           <a href={place.href}>{place.name}</a>
+         </li>
+       )
+     )}
+   />
+```
+
+You might also want to build something before the {@link rxjs#Observable | Observable} has a value and after it completes:
+
+```jsx
+   <Observer
+     of={stagedFile.$uploadProgress)}
+     init={() => <LoadingSpinner/>}
+     next={percentComplete => <ProgressBar progress={percentComplete * 0.01}/>}
+     complete={() => <Okay/>}
+   />
+```
 
 Example:
 
@@ -36,9 +63,13 @@ You might also want to build something before the {@link rxjs#Observable | Obser
 
 ▪ **T**
 
+▪ **T**
+
 ▪ **SS**
 
 ## Hierarchy
+
+* Component‹[ObserverProps](../globals.md#observerprops)‹T›, ObserverState‹T››
 
 * Component‹[ObserverProps](../globals.md#observerprops)‹T›, ObserverState‹T››
 
@@ -52,11 +83,13 @@ You might also want to build something before the {@link rxjs#Observable | Obser
 
 ### Properties
 
+* [base](observer.md#optional-base)
 * [context](observer.md#context)
 * [props](observer.md#props)
 * [refs](observer.md#refs)
 * [state](observer.md#state)
 * [contextType](observer.md#static-optional-contexttype)
+* [displayName](observer.md#static-optional-displayname)
 
 ### Methods
 
@@ -71,10 +104,13 @@ You might also want to build something before the {@link rxjs#Observable | Obser
 * [componentWillUnmount](observer.md#componentwillunmount)
 * [componentWillUpdate](observer.md#optional-componentwillupdate)
 * [forceUpdate](observer.md#forceupdate)
+* [getChildContext](observer.md#optional-getchildcontext)
 * [getSnapshotBeforeUpdate](observer.md#optional-getsnapshotbeforeupdate)
 * [render](observer.md#render)
 * [setState](observer.md#setstate)
 * [shouldComponentUpdate](observer.md#optional-shouldcomponentupdate)
+* [getDerivedStateFromError](observer.md#static-optional-getderivedstatefromerror)
+* [getDerivedStateFromProps](observer.md#static-optional-getderivedstatefromprops)
 
 ### Object literals
 
@@ -88,7 +124,7 @@ You might also want to build something before the {@link rxjs#Observable | Obser
 
 *Overrides void*
 
-Defined in react/Observer.ts:65
+*Defined in [preact/Observer.ts:65](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/preact/Observer.ts#L65)*
 
 **Parameters:**
 
@@ -100,35 +136,37 @@ Name | Type |
 
 ## Properties
 
+### `Optional` base
+
+• **base**? : *Element | Text*
+
+*Inherited from void*
+
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:119
+
+___
+
 ###  context
 
 • **context**: *any*
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:425
+*Overrides void*
 
-If using the new style context, re-declare this in your class to be the
-`React.ContextType` of your `static contextType`.
-
-```ts
-static contextType = MyContext
-context!: React.ContextType<typeof MyContext>
-```
-
-**`deprecated`** if used without a type annotation, or without static contextType
-
-**`see`** https://reactjs.org/docs/legacy-context.html
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:118
 
 ___
 
 ###  props
 
-• **props**: *Readonly‹[ObserverProps](../globals.md#observerprops)‹T›› & Readonly‹object›*
+• **props**: *RenderableProps‹[ObserverProps](../globals.md#observerprops)‹T››*
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:450
+*Overrides void*
+
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:117
 
 ___
 
@@ -138,7 +176,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:456
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/@types/react/index.d.ts:459
 
 **`deprecated`** 
 https://reactjs.org/docs/refs-and-the-dom.html#legacy-api-string-refs
@@ -155,7 +193,9 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:451
+*Overrides void*
+
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:116
 
 ___
 
@@ -165,26 +205,19 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:410
+*Overrides void*
 
-If set, `this.context` will be set at runtime to the current value of the given Context.
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:105
 
-Usage:
+___
 
-```ts
-type MyContext = number
-const Ctx = React.createContext<MyContext>(0)
+### `Static` `Optional` displayName
 
-class Foo extends React.Component {
-  static contextType = Ctx
-  context!: React.ContextType<typeof Ctx>
-  render () {
-    return <>My context's value: {this.context}</>;
-  }
-}
-```
+▪ **displayName**? : *string*
 
-**`see`** https://reactjs.org/docs/context.html#classcontexttype
+*Inherited from void*
+
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:103
 
 ## Methods
 
@@ -194,7 +227,7 @@ class Foo extends React.Component {
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:638
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/@types/react/index.d.ts:641
 
 Called immediately before mounting occurs, and before `Component#render`.
 Avoid introducing any side-effects or subscriptions in this method.
@@ -220,7 +253,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:670
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/@types/react/index.d.ts:673
 
 Called when the component may be receiving new props.
 React may call this even if props have not changed, so be sure to compare new and existing
@@ -256,7 +289,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:698
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/@types/react/index.d.ts:701
 
 Called immediately before rendering when new props or state is received. Not called for the initial render.
 
@@ -287,21 +320,20 @@ ___
 
 ### `Optional` componentDidCatch
 
-▸ **componentDidCatch**(`error`: Error, `errorInfo`: ErrorInfo): *void*
+▸ **componentDidCatch**(`error`: any, `errorInfo`: any): *void*
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:567
+*Overrides void*
 
-Catches exceptions generated in descendant components. Unhandled exceptions will cause
-the entire component tree to unmount.
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:97
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`error` | Error |
-`errorInfo` | ErrorInfo |
+`error` | any |
+`errorInfo` | any |
 
 **Returns:** *void*
 
@@ -313,7 +345,7 @@ ___
 
 *Overrides void*
 
-Defined in react/Observer.ts:75
+*Defined in [preact/Observer.ts:75](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/preact/Observer.ts#L75)*
 
 **Returns:** *void*
 
@@ -321,23 +353,21 @@ ___
 
 ### `Optional` componentDidUpdate
 
-▸ **componentDidUpdate**(`prevProps`: Readonly‹[ObserverProps](../globals.md#observerprops)‹T››, `prevState`: Readonly‹ObserverState‹T››, `snapshot?`: SS): *void*
+▸ **componentDidUpdate**(`previousProps`: Readonly‹[ObserverProps](../globals.md#observerprops)‹T››, `previousState`: Readonly‹ObserverState‹T››, `snapshot`: any): *void*
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:609
+*Overrides void*
 
-Called immediately after updating occurs. Not called for the initial render.
-
-The snapshot is only present if getSnapshotBeforeUpdate is present and returns non-null.
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:96
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`prevProps` | Readonly‹[ObserverProps](../globals.md#observerprops)‹T›› |
-`prevState` | Readonly‹ObserverState‹T›› |
-`snapshot?` | SS |
+`previousProps` | Readonly‹[ObserverProps](../globals.md#observerprops)‹T›› |
+`previousState` | Readonly‹ObserverState‹T›› |
+`snapshot` | any |
 
 **Returns:** *void*
 
@@ -349,19 +379,9 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:624
+*Overrides void*
 
-Called immediately before mounting occurs, and before `Component#render`.
-Avoid introducing any side-effects or subscriptions in this method.
-
-Note: the presence of getSnapshotBeforeUpdate or getDerivedStateFromProps
-prevents this from being invoked.
-
-**`deprecated`** 16.3, use componentDidMount or the constructor instead; will stop working in React 17
-
-**`see`** https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#initializing-state
-
-**`see`** https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:88
 
 **Returns:** *void*
 
@@ -373,22 +393,9 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:653
+*Overrides void*
 
-Called when the component may be receiving new props.
-React may call this even if props have not changed, so be sure to compare new and existing
-props if you only want to handle changes.
-
-Calling `Component#setState` generally does not trigger this method.
-
-Note: the presence of getSnapshotBeforeUpdate or getDerivedStateFromProps
-prevents this from being invoked.
-
-**`deprecated`** 16.3, use static getDerivedStateFromProps instead; will stop working in React 17
-
-**`see`** https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#updating-state-based-on-props
-
-**`see`** https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:92
 
 **Parameters:**
 
@@ -407,7 +414,7 @@ ___
 
 *Overrides void*
 
-Defined in react/Observer.ts:84
+*Defined in [preact/Observer.ts:84](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/preact/Observer.ts#L84)*
 
 **Returns:** *void*
 
@@ -419,20 +426,9 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:683
+*Overrides void*
 
-Called immediately before rendering when new props or state is received. Not called for the initial render.
-
-Note: You cannot call `Component#setState` here.
-
-Note: the presence of getSnapshotBeforeUpdate or getDerivedStateFromProps
-prevents this from being invoked.
-
-**`deprecated`** 16.3, use getSnapshotBeforeUpdate instead; will stop working in React 17
-
-**`see`** https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#reading-dom-properties-before-an-update
-
-**`see`** https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:94
 
 **Parameters:**
 
@@ -448,15 +444,17 @@ ___
 
 ###  forceUpdate
 
-▸ **forceUpdate**(`callBack?`: function): *void*
+▸ **forceUpdate**(`callback?`: function): *void*
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:442
+*Overrides void*
+
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:129
 
 **Parameters:**
 
-▪`Optional`  **callBack**: *function*
+▪`Optional`  **callback**: *function*
 
 ▸ (): *void*
 
@@ -464,51 +462,60 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/r
 
 ___
 
-### `Optional` getSnapshotBeforeUpdate
+### `Optional` getChildContext
 
-▸ **getSnapshotBeforeUpdate**(`prevProps`: Readonly‹[ObserverProps](../globals.md#observerprops)‹T››, `prevState`: Readonly‹ObserverState‹T››): *SS | null*
+▸ **getChildContext**(): *object*
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:603
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:91
 
-Runs before React applies the result of `render` to the document, and
-returns an object to be given to componentDidUpdate. Useful for saving
-things such as scroll position before `render` causes changes to it.
+**Returns:** *object*
 
-Note: the presence of getSnapshotBeforeUpdate prevents any of the deprecated
-lifecycle events from running.
+___
+
+### `Optional` getSnapshotBeforeUpdate
+
+▸ **getSnapshotBeforeUpdate**(`oldProps`: Readonly‹[ObserverProps](../globals.md#observerprops)‹T››, `oldState`: Readonly‹ObserverState‹T››): *any*
+
+*Inherited from void*
+
+*Overrides void*
+
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:95
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`prevProps` | Readonly‹[ObserverProps](../globals.md#observerprops)‹T›› |
-`prevState` | Readonly‹ObserverState‹T›› |
+`oldProps` | Readonly‹[ObserverProps](../globals.md#observerprops)‹T›› |
+`oldState` | Readonly‹ObserverState‹T›› |
 
-**Returns:** *SS | null*
+**Returns:** *any*
 
 ___
 
 ###  render
 
-▸ **render**(): *string | number | false | true | __type | ReactElement‹any, string | function | object› | ReactNodeArray | ReactPortal*
+▸ **render**(): *Element*
 
 *Overrides void*
 
-Defined in react/Observer.ts:88
+*Defined in [preact/Observer.ts:88](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/preact/Observer.ts#L88)*
 
-**Returns:** *string | number | false | true | __type | ReactElement‹any, string | function | object› | ReactNodeArray | ReactPortal*
+**Returns:** *Element*
 
 ___
 
 ###  setState
 
-▸ **setState**<**K**>(`state`: function | S | object, `callback?`: function): *void*
+▸ **setState**<**K**>(`state`: function | object | object, `callback?`: function): *void*
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:437
+*Overrides void*
+
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:124
 
 **Type parameters:**
 
@@ -516,7 +523,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/r
 
 **Parameters:**
 
-▪ **state**: *function | S | object*
+▪ **state**: *function | object | object*
 
 ▪`Optional`  **callback**: *function*
 
@@ -532,16 +539,9 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/node_modules/@types/react/index.d.ts:557
+*Overrides void*
 
-Called to determine whether the change in props and state should trigger a re-render.
-
-`Component` always returns true.
-`PureComponent` implements a shallow comparison on props and state and returns true if any
-props or states have changed.
-
-If false is returned, `Component#render`, `componentWillUpdate`
-and `componentDidUpdate` will not be called.
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:93
 
 **Parameters:**
 
@@ -553,22 +553,67 @@ Name | Type |
 
 **Returns:** *boolean*
 
+___
+
+### `Static` `Optional` getDerivedStateFromError
+
+▸ **getDerivedStateFromError**(`error`: any): *object | null*
+
+*Inherited from void*
+
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:114
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`error` | any |
+
+**Returns:** *object | null*
+
+___
+
+### `Static` `Optional` getDerivedStateFromProps
+
+▸ **getDerivedStateFromProps**(`props`: Readonly‹object›, `state`: Readonly‹object›): *object | null*
+
+*Inherited from void*
+
+Defined in /Users/cole/Projects/Girf/Girf/caster-web/bloc-utils/node_modules/preact/src/index.d.ts:113
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`props` | Readonly‹object› |
+`state` | Readonly‹object› |
+
+**Returns:** *object | null*
+
 ## Object literals
 
 ### `Static` defaultProps
 
 ### ▪ **defaultProps**: *object*
 
-Defined in react/Observer.ts:62
+*Overrides void*
+
+*Defined in [preact/Observer.ts:62](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/preact/Observer.ts#L62)*
+
+*Defined in [react/Observer.ts:62](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/react/Observer.ts#L62)*
 
 ###  complete
 
 • **complete**: *NONE* =  NONE
 
-Defined in react/Observer.ts:64
+*Defined in [preact/Observer.ts:64](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/preact/Observer.ts#L64)*
+
+*Defined in [react/Observer.ts:64](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/react/Observer.ts#L64)*
 
 ###  init
 
 • **init**: *NONE* =  NONE
 
-Defined in react/Observer.ts:63
+*Defined in [preact/Observer.ts:63](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/preact/Observer.ts#L63)*
+
+*Defined in [react/Observer.ts:63](https://github.com/colelawrence/bloc-utils/blob/8bdd74f/src/react/Observer.ts#L63)*

@@ -2,10 +2,10 @@
   "name": "bloc-utils",
   "description": "Utilities for building applications with the BLoC pattern",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "yarn build-dist && yarn build-readme",
-    "clean": "rm *.d.ts *.js *.map react/* jest/*",
+    "clean": "rm -f *.d.ts *.js *.map react/* preact/* jest/*",
     "build-dist": "yarn clean && tsc --outDir ./",
     "build-readme": "typedoc --theme markdown --mode file --hideGenerator --excludeNotExported --excludePrivate --excludeExternals --out ./docs ./src"
   },
@@ -26,14 +26,18 @@
     "react"
   ],
   "optionalDependencies": {
-    "react": "^16",
-    "jest": "*"
+    "jest": "*",
+    "preact": "*",
+    "react": "*"
   },
   "peerDependencies": {
     "rxjs": "^6"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.4",
     "jest": "^24",
+    "preact": "^10.0.0",
     "react": "^16",
     "rxjs": "^6",
     "typedoc": "^0.15.0",
