@@ -139,13 +139,13 @@ import { onEnterOrClick } from "../react-helpers";
  * @param {{ todo: Todo }} props
  */
 export function TodoItem({ todo }) {
-  const bloc = useContext(TodoBloc);
+  const todos = useContext(TodoBloc);
 
   return (
     <li
       className="list-group-item"
       {...onEnterOrClick(() => {
-        bloc.toggleTodo(todo.id);
+        todos.toggleTodo(todo.id);
       })}
     >
       <span style={{ textDecoration: todo.done ? "line-through" : "none" }}>
@@ -155,7 +155,7 @@ export function TodoItem({ todo }) {
         className="btn btn-sm btn-default float-right"
         aria-label={`Delete "${todo.title}"`}
         {...onEnterOrClick(() => {
-          bloc.deleteTodo(todo.id);
+          todos.deleteTodo(todo.id);
         })}
       >
         🗑
