@@ -29,7 +29,7 @@
 
 Ƭ **BlocInput**: *object*
 
-*Defined in [protectBloc.ts:12](https://github.com/colelawrence/bloc-utils/blob/df18369/src/protectBloc.ts#L12)*
+*Defined in [protectBloc.ts:12](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/protectBloc.ts#L12)*
 
 Strict BLoC type which enforces that each property is either a void function, or an Observable
 
@@ -43,9 +43,9 @@ ___
 
 Ƭ **ObserverProps**: *object*
 
-*Defined in [preact/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/df18369/src/preact/Observer.ts#L12)*
+*Defined in [preact/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/preact/Observer.ts#L12)*
 
-*Defined in [react/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/df18369/src/react/Observer.ts#L12)*
+*Defined in [react/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/react/Observer.ts#L12)*
 
 Properties of the `<Observer .../>` component
 Properties of the `<Observer .../>` component
@@ -58,7 +58,7 @@ ___
 
 Ƭ **ProtectedBloc**: *object*
 
-*Defined in [protectBloc.ts:7](https://github.com/colelawrence/bloc-utils/blob/df18369/src/protectBloc.ts#L7)*
+*Defined in [protectBloc.ts:7](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/protectBloc.ts#L7)*
 
 Make all Behavior / Subject properties in T asObservable().
 The resulting ProtectedBloc will not allow anyone to call .next() on any Behaviors.
@@ -71,7 +71,7 @@ The resulting ProtectedBloc will not allow anyone to call .next() on any Behavio
 
 ▸ **protectBloc**<**T**>(`bloc`: T): *[ProtectedBloc](globals.md#protectedbloc)‹T›*
 
-*Defined in [protectBloc.ts:24](https://github.com/colelawrence/bloc-utils/blob/df18369/src/protectBloc.ts#L24)*
+*Defined in [protectBloc.ts:24](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/protectBloc.ts#L24)*
 
 Protects a BLoC from exposing mutable Behaviors or Subjects, and exposes those as Observables.
 
@@ -96,7 +96,7 @@ ___
 
 ▸ **spyOnBloc**<**T**>(`bloc`: T): *SpyOnBloc‹Unwrap‹T››*
 
-*Defined in [jest/index.ts:34](https://github.com/colelawrence/bloc-utils/blob/df18369/src/jest/index.ts#L34)*
+*Defined in [jest/index.ts:34](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/jest/index.ts#L34)*
 
 Test Bloc observable values by extending each observable with
 `.nextValue: Promise<T>` and `.latestValue: T` for easier testing with `jest`
@@ -131,7 +131,7 @@ ___
 
 ▸ **spyOnObservable**<**T**>(`obs`: Observable‹T›): *SpyOnObservable‹T›*
 
-*Defined in [jest/index.ts:47](https://github.com/colelawrence/bloc-utils/blob/df18369/src/jest/index.ts#L47)*
+*Defined in [jest/index.ts:47](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/jest/index.ts#L47)*
 
 **Type parameters:**
 
