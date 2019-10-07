@@ -1,5 +1,5 @@
 import { Observable } from "rxjs";
-import { BlocInput, ProtectedBloc } from "../protectBloc";
+import { SealState, ProtectedState } from "../seal";
 
 interface SpyOnObservable<T> extends Observable<T> {
   readonly latestValue: T;
@@ -8,20 +8,20 @@ interface SpyOnObservable<T> extends Observable<T> {
 
 const INIT = Symbol("init");
 
-type SpyOnBloc<T> = {
+type SpyOnState<T> = {
   [P in keyof T]: T[P] extends Observable<infer R> ? SpyOnObservable<R> : T[P];
 };
 
-/** Helper for unnesting the Bloc type out of the ProtectedBloc<T> wrapper */
-type Unwrap<T> = T extends ProtectedBloc<infer R> ? R : T;
+/** Helper for unnesting the State type out of the ProtectedState<T> wrapper */
+type Unwrap<T> = T extends ProtectedState<infer R> ? R : T;
 
 /**
- * Test Bloc observable values by extending each observable with
+ * Test State observable values by extending each observable with
  * `.nextValue: Promise<T>` and `.latestValue: T` for easier testing with `jest`
  * 
  * Example:
  * ```js
- * const todos = spyOnBloc(createTodosBloc());
+ * const todos = spyOnState(createTodosState());
  * 
  * expect(todos.$todoInput.latestValue).toBe("")
  * // this is a promise, so we must resolve
@@ -31,10 +31,10 @@ type Unwrap<T> = T extends ProtectedBloc<infer R> ? R : T;
  * todos.updateInput("new value")
  * ```
  */
-export function spyOnBloc<T extends BlocInput>(bloc: T): SpyOnBloc<Unwrap<T>> {
-  const spyOn = { ...bloc };
-  for (const key in bloc) {
-    const value = bloc[key];
+export function spyOnState<T>(state: T): SpyOnState<Unwrap<T>> {
+  const spyOn = { ...state };
+  for (const key in state) {
+    const value = state[key];
     if (value instanceof Observable) {
       // @ts-ignore
       spyOn[key] = spyOnObservable(value);

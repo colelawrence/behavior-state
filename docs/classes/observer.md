@@ -1,4 +1,4 @@
-**[bloc-utils](../README.md)**
+**[behavior-state](../README.md)**
 
 [Globals](../globals.md) › [Observer](observer.md)
 
@@ -11,7 +11,7 @@ Example:
 
 ```jsx
    <Observer
-     of={bloc.$places}
+     of={state.$places}
      next={places => (
        places.map(place =>
          <li>
@@ -37,7 +37,7 @@ Example:
 
 ```jsx
    <Observer
-     of={bloc.$places}
+     of={state.$places}
      next={places => (
        places.map(place =>
          <li>
@@ -124,7 +124,7 @@ You might also want to build something before the {@link rxjs#Observable | Obser
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:65](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/preact/Observer.ts#L65)*
+*Defined in [preact/Observer.ts:65](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/preact/Observer.ts#L65)*
 
 **Parameters:**
 
@@ -345,7 +345,7 @@ ___
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:75](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/preact/Observer.ts#L75)*
+*Defined in [preact/Observer.ts:75](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/preact/Observer.ts#L75)*
 
 **Returns:** *void*
 
@@ -414,7 +414,7 @@ ___
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:84](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/preact/Observer.ts#L84)*
+*Defined in [preact/Observer.ts:84](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/preact/Observer.ts#L84)*
 
 **Returns:** *void*
 
@@ -501,7 +501,7 @@ ___
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:88](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/preact/Observer.ts#L88)*
+*Defined in [preact/Observer.ts:88](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/preact/Observer.ts#L88)*
 
 **Returns:** *Element*
 
@@ -598,22 +598,22 @@ Name | Type |
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:62](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/preact/Observer.ts#L62)*
+*Defined in [preact/Observer.ts:62](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/preact/Observer.ts#L62)*
 
-*Defined in [react/Observer.ts:62](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/react/Observer.ts#L62)*
+*Defined in [react/Observer.ts:62](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/react/Observer.ts#L62)*
 
 ###  complete
 
 • **complete**: *NONE* =  NONE
 
-*Defined in [preact/Observer.ts:64](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/preact/Observer.ts#L64)*
+*Defined in [preact/Observer.ts:64](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/preact/Observer.ts#L64)*
 
-*Defined in [react/Observer.ts:64](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/react/Observer.ts#L64)*
+*Defined in [react/Observer.ts:64](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/react/Observer.ts#L64)*
 
 ###  init
 
 • **init**: *NONE* =  NONE
 
-*Defined in [preact/Observer.ts:63](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/preact/Observer.ts#L63)*
+*Defined in [preact/Observer.ts:63](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/preact/Observer.ts#L63)*
 
-*Defined in [react/Observer.ts:63](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/react/Observer.ts#L63)*
+*Defined in [react/Observer.ts:63](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/react/Observer.ts#L63)*

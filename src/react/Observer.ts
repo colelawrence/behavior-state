@@ -31,7 +31,7 @@ const NONE = () => null;
  *
  * ```jsx
  *    <Observer
- *      of={bloc.$places}
+ *      of={state.$places}
  *      next={places => (
  *        places.map(place =>
  *          <li>

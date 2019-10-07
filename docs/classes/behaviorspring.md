@@ -1,90 +1,83 @@
 **[behavior-state](../README.md)**
 
-[Globals](../globals.md) › [Behavior](behavior.md)
+[Globals](../globals.md) › [BehaviorSpring](behaviorspring.md)
 
-# Class: Behavior <**T**>
+# Class: BehaviorSpring
 
 An extension of BehaviorSubject that requires an initial value and emits its current
 value whenever it is subscribed to.
 
-**`class`** Behavior<T>
-
-## Type parameters
-
-▪ **T**
+**`class`** BehaviorSpring
 
 ## Hierarchy
 
-* BehaviorSubject‹T›
+  * [Behavior](behavior.md)‹number›
 
-  * **Behavior**
-
-  * [BehaviorArray](behaviorarray.md)
-
-  * [BehaviorSpring](behaviorspring.md)
+  * **BehaviorSpring**
 
 ## Implements
 
-* Subscribable‹T›
+* Subscribable‹number›
 * SubscriptionLike
 
 ## Index
 
 ### Constructors
 
-* [constructor](behavior.md#constructor)
+* [constructor](behaviorspring.md#constructor)
 
 ### Properties
 
-* [_isScalar](behavior.md#_isscalar)
-* [closed](behavior.md#closed)
-* [hasError](behavior.md#haserror)
-* [isStopped](behavior.md#isstopped)
-* [observers](behavior.md#observers)
-* [operator](behavior.md#operator)
-* [react](behavior.md#react)
-* [source](behavior.md#source)
-* [thrownError](behavior.md#thrownerror)
-* [value](behavior.md#value)
-* [create](behavior.md#static-create)
-* [if](behavior.md#static-if)
-* [throw](behavior.md#static-throw)
+* [_isScalar](behaviorspring.md#_isscalar)
+* [closed](behaviorspring.md#closed)
+* [hasError](behaviorspring.md#haserror)
+* [isStopped](behaviorspring.md#isstopped)
+* [observers](behaviorspring.md#observers)
+* [operator](behaviorspring.md#operator)
+* [react](behaviorspring.md#react)
+* [source](behaviorspring.md#source)
+* [thrownError](behaviorspring.md#thrownerror)
+* [value](behaviorspring.md#value)
+* [create](behaviorspring.md#static-create)
+* [if](behaviorspring.md#static-if)
+* [throw](behaviorspring.md#static-throw)
 
 ### Methods
 
-* [_subscribe](behavior.md#_subscribe)
-* [_trySubscribe](behavior.md#_trysubscribe)
-* [asObservable](behavior.md#asobservable)
-* [complete](behavior.md#complete)
-* [error](behavior.md#error)
-* [forEach](behavior.md#foreach)
-* [getValue](behavior.md#getvalue)
-* [lift](behavior.md#lift)
-* [next](behavior.md#next)
-* [pipe](behavior.md#pipe)
-* [subscribe](behavior.md#subscribe)
-* [toPromise](behavior.md#topromise)
-* [unsubscribe](behavior.md#unsubscribe)
+* [_subscribe](behaviorspring.md#_subscribe)
+* [_trySubscribe](behaviorspring.md#_trysubscribe)
+* [asObservable](behaviorspring.md#asobservable)
+* [complete](behaviorspring.md#complete)
+* [error](behaviorspring.md#error)
+* [forEach](behaviorspring.md#foreach)
+* [getValue](behaviorspring.md#getvalue)
+* [lift](behaviorspring.md#lift)
+* [next](behaviorspring.md#next)
+* [pipe](behaviorspring.md#pipe)
+* [setDestination](behaviorspring.md#setdestination)
+* [setDestinationAndForget](behaviorspring.md#setdestinationandforget)
+* [subscribe](behaviorspring.md#subscribe)
+* [toPromise](behaviorspring.md#topromise)
+* [unsubscribe](behaviorspring.md#unsubscribe)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new Behavior**(`_value`: T): *[Behavior](behavior.md)*
-
-*Inherited from void*
+\+ **new BehaviorSpring**(`initialValue`: number, `c?`: object): *[BehaviorSpring](behaviorspring.md)*
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/rxjs/internal/BehaviorSubject.d.ts:11
+*Defined in [spring/BehaviorSpring.ts:32](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/spring/BehaviorSpring.ts#L32)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`_value` | T |
+`initialValue` | number |
+`c?` | object |
 
-**Returns:** *[Behavior](behavior.md)*
+**Returns:** *[BehaviorSpring](behaviorspring.md)*
 
 ## Properties
 
@@ -132,7 +125,7 @@ ___
 
 ###  observers
 
-• **observers**: *Observer‹T›[]*
+• **observers**: *Observer‹number›[]*
 
 *Inherited from void*
 
@@ -142,7 +135,7 @@ ___
 
 ###  operator
 
-• **operator**: *Operator‹any, T›*
+• **operator**: *Operator‹any, number›*
 
 *Inherited from void*
 
@@ -154,7 +147,7 @@ ___
 
 ###  react
 
-• **react**: *React.FC‹[ObserverProps](../globals.md#observerprops)‹T››*
+• **react**: *React.FC‹[ObserverProps](../globals.md#observerprops)‹number››*
 
 *Inherited from void*
 
@@ -186,7 +179,7 @@ ___
 
 ###  value
 
-• **value**: *T*
+• **value**: *number*
 
 *Inherited from void*
 
@@ -240,7 +233,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 ###  _subscribe
 
-▸ **_subscribe**(`subscriber`: Subscriber‹T›): *Subscription*
+▸ **_subscribe**(`subscriber`: Subscriber‹number›): *Subscription*
 
 *Inherited from void*
 
@@ -254,7 +247,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`subscriber` | Subscriber‹T› |
+`subscriber` | Subscriber‹number› |
 
 **Returns:** *Subscription*
 
@@ -262,7 +255,7 @@ ___
 
 ###  _trySubscribe
 
-▸ **_trySubscribe**(`subscriber`: Subscriber‹T›): *TeardownLogic*
+▸ **_trySubscribe**(`subscriber`: Subscriber‹number›): *TeardownLogic*
 
 *Inherited from void*
 
@@ -276,7 +269,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`subscriber` | Subscriber‹T› |
+`subscriber` | Subscriber‹number› |
 
 **Returns:** *TeardownLogic*
 
@@ -284,7 +277,7 @@ ___
 
 ###  asObservable
 
-▸ **asObservable**(): *Observable‹T›*
+▸ **asObservable**(): *Observable‹number›*
 
 *Inherited from void*
 
@@ -294,7 +287,7 @@ Creates a new Observable with this Subject as the source. You can do this
 to create customize Observer-side logic of the Subject and conceal it from
 code that uses the Observable.
 
-**Returns:** *Observable‹T›*
+**Returns:** *Observable‹number›*
 
 Observable that the Subject casts to
 
@@ -346,13 +339,13 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 a handler for each value emitted by the observable
 
-▸ (`value`: T): *void*
+▸ (`value`: number): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`value` | T |
+`value` | number |
 
 ▪`Optional`  **promiseCtor**: *PromiseConstructorLike*
 
@@ -365,19 +358,19 @@ ___
 
 ###  getValue
 
-▸ **getValue**(): *T*
+▸ **getValue**(): *number*
 
 *Inherited from void*
 
 Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/rxjs/internal/BehaviorSubject.d.ts:16
 
-**Returns:** *T*
+**Returns:** *number*
 
 ___
 
 ###  lift
 
-▸ **lift**<**R**>(`operator`: Operator‹T, R›): *Observable‹R›*
+▸ **lift**<**R**>(`operator`: Operator‹number, R›): *Observable‹R›*
 
 *Inherited from void*
 
@@ -393,7 +386,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`operator` | Operator‹T, R› |
+`operator` | Operator‹number, R› |
 
 **Returns:** *Observable‹R›*
 
@@ -401,7 +394,7 @@ ___
 
 ###  next
 
-▸ **next**(`value`: T): *void*
+▸ **next**(`value`: number): *void*
 
 *Inherited from void*
 
@@ -413,7 +406,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`value` | T |
+`value` | number |
 
 **Returns:** *void*
 
@@ -421,15 +414,15 @@ ___
 
 ###  pipe
 
-▸ **pipe**(): *Observable‹T›*
+▸ **pipe**(): *Observable‹number›*
 
 *Inherited from void*
 
 Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/rxjs/internal/Observable.d.ts:77
 
-**Returns:** *Observable‹T›*
+**Returns:** *Observable‹number›*
 
-▸ **pipe**<**A**>(`op1`: OperatorFunction‹T, A›): *Observable‹A›*
+▸ **pipe**<**A**>(`op1`: OperatorFunction‹number, A›): *Observable‹A›*
 
 *Inherited from void*
 
@@ -443,11 +436,11 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 
 **Returns:** *Observable‹A›*
 
-▸ **pipe**<**A**, **B**>(`op1`: OperatorFunction‹T, A›, `op2`: OperatorFunction‹A, B›): *Observable‹B›*
+▸ **pipe**<**A**, **B**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›): *Observable‹B›*
 
 *Inherited from void*
 
@@ -463,12 +456,12 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 `op2` | OperatorFunction‹A, B› |
 
 **Returns:** *Observable‹B›*
 
-▸ **pipe**<**A**, **B**, **C**>(`op1`: OperatorFunction‹T, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›): *Observable‹C›*
+▸ **pipe**<**A**, **B**, **C**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›): *Observable‹C›*
 
 *Inherited from void*
 
@@ -486,13 +479,13 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 `op2` | OperatorFunction‹A, B› |
 `op3` | OperatorFunction‹B, C› |
 
 **Returns:** *Observable‹C›*
 
-▸ **pipe**<**A**, **B**, **C**, **D**>(`op1`: OperatorFunction‹T, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›): *Observable‹D›*
+▸ **pipe**<**A**, **B**, **C**, **D**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›): *Observable‹D›*
 
 *Inherited from void*
 
@@ -512,14 +505,14 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 `op2` | OperatorFunction‹A, B› |
 `op3` | OperatorFunction‹B, C› |
 `op4` | OperatorFunction‹C, D› |
 
 **Returns:** *Observable‹D›*
 
-▸ **pipe**<**A**, **B**, **C**, **D**, **E**>(`op1`: OperatorFunction‹T, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›): *Observable‹E›*
+▸ **pipe**<**A**, **B**, **C**, **D**, **E**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›): *Observable‹E›*
 
 *Inherited from void*
 
@@ -541,7 +534,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 `op2` | OperatorFunction‹A, B› |
 `op3` | OperatorFunction‹B, C› |
 `op4` | OperatorFunction‹C, D› |
@@ -549,7 +542,7 @@ Name | Type |
 
 **Returns:** *Observable‹E›*
 
-▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**>(`op1`: OperatorFunction‹T, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›): *Observable‹F›*
+▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›): *Observable‹F›*
 
 *Inherited from void*
 
@@ -573,7 +566,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 `op2` | OperatorFunction‹A, B› |
 `op3` | OperatorFunction‹B, C› |
 `op4` | OperatorFunction‹C, D› |
@@ -582,7 +575,7 @@ Name | Type |
 
 **Returns:** *Observable‹F›*
 
-▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**>(`op1`: OperatorFunction‹T, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›): *Observable‹G›*
+▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›): *Observable‹G›*
 
 *Inherited from void*
 
@@ -608,7 +601,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 `op2` | OperatorFunction‹A, B› |
 `op3` | OperatorFunction‹B, C› |
 `op4` | OperatorFunction‹C, D› |
@@ -618,7 +611,7 @@ Name | Type |
 
 **Returns:** *Observable‹G›*
 
-▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**>(`op1`: OperatorFunction‹T, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›): *Observable‹H›*
+▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›): *Observable‹H›*
 
 *Inherited from void*
 
@@ -646,7 +639,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 `op2` | OperatorFunction‹A, B› |
 `op3` | OperatorFunction‹B, C› |
 `op4` | OperatorFunction‹C, D› |
@@ -657,7 +650,7 @@ Name | Type |
 
 **Returns:** *Observable‹H›*
 
-▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**, **I**>(`op1`: OperatorFunction‹T, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›, `op9`: OperatorFunction‹H, I›): *Observable‹I›*
+▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**, **I**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›, `op9`: OperatorFunction‹H, I›): *Observable‹I›*
 
 *Inherited from void*
 
@@ -687,7 +680,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 `op2` | OperatorFunction‹A, B› |
 `op3` | OperatorFunction‹B, C› |
 `op4` | OperatorFunction‹C, D› |
@@ -699,7 +692,7 @@ Name | Type |
 
 **Returns:** *Observable‹I›*
 
-▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**, **I**>(`op1`: OperatorFunction‹T, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›, `op9`: OperatorFunction‹H, I›, ...`operations`: OperatorFunction‹any, any›[]): *Observable‹__type›*
+▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**, **I**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›, `op9`: OperatorFunction‹H, I›, ...`operations`: OperatorFunction‹any, any›[]): *Observable‹__type›*
 
 *Inherited from void*
 
@@ -729,7 +722,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`op1` | OperatorFunction‹T, A› |
+`op1` | OperatorFunction‹number, A› |
 `op2` | OperatorFunction‹A, B› |
 `op3` | OperatorFunction‹B, C› |
 `op4` | OperatorFunction‹C, D› |
@@ -744,9 +737,41 @@ Name | Type |
 
 ___
 
+###  setDestination
+
+▸ **setDestination**(`newDestination`: number): *Promise‹boolean›*
+
+*Defined in [spring/BehaviorSpring.ts:72](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/spring/BehaviorSpring.ts#L72)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`newDestination` | number |
+
+**Returns:** *Promise‹boolean›*
+
+___
+
+###  setDestinationAndForget
+
+▸ **setDestinationAndForget**(`newDestination`: number): *void*
+
+*Defined in [spring/BehaviorSpring.ts:82](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/spring/BehaviorSpring.ts#L82)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`newDestination` | number |
+
+**Returns:** *void*
+
+___
+
 ###  subscribe
 
-▸ **subscribe**(`observer?`: PartialObserver‹T›): *Subscription*
+▸ **subscribe**(`observer?`: PartialObserver‹number›): *Subscription*
 
 *Inherited from void*
 
@@ -756,7 +781,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 Name | Type |
 ------ | ------ |
-`observer?` | PartialObserver‹T› |
+`observer?` | PartialObserver‹number› |
 
 **Returns:** *Subscription*
 
@@ -820,13 +845,13 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 ▪ **next**: *function*
 
-▸ (`value`: T): *void*
+▸ (`value`: number): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`value` | T |
+`value` | number |
 
 ▪ **error**: *null | undefined*
 
@@ -846,13 +871,13 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 ▪`Optional`  **next**: *function*
 
-▸ (`value`: T): *void*
+▸ (`value`: number): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`value` | T |
+`value` | number |
 
 ▪`Optional`  **error**: *function*
 

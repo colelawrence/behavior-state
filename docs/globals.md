@@ -1,37 +1,70 @@
-**[bloc-utils](README.md)**
+**[behavior-state](README.md)**
 
 [Globals](globals.md)
 
-# bloc-utils
+# behavior-state
 
 ## Index
 
 ### Classes
 
 * [Behavior](classes/behavior.md)
+* [BehaviorArray](classes/behaviorarray.md)
+* [BehaviorSpring](classes/behaviorspring.md)
 * [Observer](classes/observer.md)
 
 ### Type aliases
 
-* [BlocInput](globals.md#blocinput)
 * [ObserverProps](globals.md#observerprops)
-* [ProtectedBloc](globals.md#protectedbloc)
+* [ProtectedState](globals.md#protectedstate)
+* [SealState](globals.md#sealstate)
+* [TLength](globals.md#tlength)
 
 ### Functions
 
-* [protectBloc](globals.md#protectbloc)
-* [spyOnBloc](globals.md#spyonbloc)
+* [seal](globals.md#seal)
+* [shouldStopAnimation](globals.md#shouldstopanimation)
 * [spyOnObservable](globals.md#spyonobservable)
+* [spyOnState](globals.md#spyonstate)
+* [stepper](globals.md#stepper)
 
 ## Type aliases
 
-###  BlocInput
+###  ObserverProps
 
-Ƭ **BlocInput**: *object*
+Ƭ **ObserverProps**: *object*
 
-*Defined in [protectBloc.ts:12](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/protectBloc.ts#L12)*
+*Defined in [preact/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/preact/Observer.ts#L12)*
 
-Strict BLoC type which enforces that each property is either a void function, or an Observable
+*Defined in [react/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/react/Observer.ts#L12)*
+
+Properties of the `<Observer .../>` component
+Properties of the `<Observer .../>` component
+
+#### Type declaration:
+
+___
+
+###  ProtectedState
+
+Ƭ **ProtectedState**: *object*
+
+*Defined in [seal.ts:7](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/seal.ts#L7)*
+
+Make all Behavior / Subject properties in T asObservable().
+The resulting ProtectedState will not allow anyone to call .next() on any Behaviors.
+
+#### Type declaration:
+
+___
+
+###  SealState
+
+Ƭ **SealState**: *object*
+
+*Defined in [seal.ts:12](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/seal.ts#L12)*
+
+Strict State type which enforces that each property is either a void function, or an Observable
 
 #### Type declaration:
 
@@ -39,91 +72,54 @@ Strict BLoC type which enforces that each property is either a void function, or
 
 ___
 
-###  ObserverProps
+###  TLength
 
-Ƭ **ObserverProps**: *object*
+Ƭ **TLength**: *number | string*
 
-*Defined in [preact/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/preact/Observer.ts#L12)*
-
-*Defined in [react/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/react/Observer.ts#L12)*
-
-Properties of the `<Observer .../>` component
-Properties of the `<Observer .../>` component
-
-#### Type declaration:
-
-___
-
-###  ProtectedBloc
-
-Ƭ **ProtectedBloc**: *object*
-
-*Defined in [protectBloc.ts:7](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/protectBloc.ts#L7)*
-
-Make all Behavior / Subject properties in T asObservable().
-The resulting ProtectedBloc will not allow anyone to call .next() on any Behaviors.
-
-#### Type declaration:
+*Defined in [spring/CSS.ts:3](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/spring/CSS.ts#L3)*
 
 ## Functions
 
-###  protectBloc
+###  seal
 
-▸ **protectBloc**<**T**>(`bloc`: T): *[ProtectedBloc](globals.md#protectedbloc)‹T›*
+▸ **seal**<**T**>(`state`: T): *[ProtectedState](globals.md#protectedstate)‹T›*
 
-*Defined in [protectBloc.ts:24](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/protectBloc.ts#L24)*
+*Defined in [seal.ts:24](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/seal.ts#L24)*
 
-Protects a BLoC from exposing mutable Behaviors or Subjects, and exposes those as Observables.
+Protects a State from exposing mutable Behaviors or Subjects, and exposes those as Observables.
 
-Ensure that the users of this BLoC are not able to call .next() on the behaviors passed in.
-Additionally, types for protectBloc ensure that the shape of the bloc follows BLoC best practices.
+Ensure that the users of this State are not able to call .next() on the behaviors passed in.
+Additionally, types for protectState ensure that the shape of the State follows State best practices.
 
 **Type parameters:**
 
-▪ **T**: *[BlocInput](globals.md#blocinput)*
+▪ **T**: *[SealState](globals.md#sealstate)*
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`bloc` | T | set of Behavior / Observable values and action functions controlling the state  |
+`state` | T | set of Behavior / Observable values and action functions controlling the state  |
 
-**Returns:** *[ProtectedBloc](globals.md#protectedbloc)‹T›*
+**Returns:** *[ProtectedState](globals.md#protectedstate)‹T›*
 
 ___
 
-###  spyOnBloc
+###  shouldStopAnimation
 
-▸ **spyOnBloc**<**T**>(`bloc`: T): *SpyOnBloc‹Unwrap‹T››*
+▸ **shouldStopAnimation**(`value`: number, `destination`: number, `velocity`: number): *boolean*
 
-*Defined in [jest/index.ts:34](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/jest/index.ts#L34)*
-
-Test Bloc observable values by extending each observable with
-`.nextValue: Promise<T>` and `.latestValue: T` for easier testing with `jest`
-
-Example:
-```js
-const todos = spyOnBloc(createTodosBloc());
-
-expect(todos.$todoInput.latestValue).toBe("")
-// this is a promise, so we must resolve
-expect(todos.$todoInput.nextValue).resolve.toBe("new value")
-
-// this will update $todoInput, and the expect will test it
-todos.updateInput("new value")
-```
-
-**Type parameters:**
-
-▪ **T**: *[BlocInput](globals.md#blocinput)*
+*Defined in [spring/shouldStopAnimation.ts:1](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/spring/shouldStopAnimation.ts#L1)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`bloc` | T |
+`value` | number |
+`destination` | number |
+`velocity` | number |
 
-**Returns:** *SpyOnBloc‹Unwrap‹T››*
+**Returns:** *boolean*
 
 ___
 
@@ -131,7 +127,7 @@ ___
 
 ▸ **spyOnObservable**<**T**>(`obs`: Observable‹T›): *SpyOnObservable‹T›*
 
-*Defined in [jest/index.ts:47](https://github.com/colelawrence/bloc-utils/blob/8fb40c6/src/jest/index.ts#L47)*
+*Defined in [jest/index.ts:47](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/jest/index.ts#L47)*
 
 **Type parameters:**
 
@@ -144,3 +140,60 @@ Name | Type |
 `obs` | Observable‹T› |
 
 **Returns:** *SpyOnObservable‹T›*
+
+___
+
+###  spyOnState
+
+▸ **spyOnState**<**T**>(`state`: T): *SpyOnState‹Unwrap‹T››*
+
+*Defined in [jest/index.ts:34](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/jest/index.ts#L34)*
+
+Test State observable values by extending each observable with
+`.nextValue: Promise<T>` and `.latestValue: T` for easier testing with `jest`
+
+Example:
+```js
+const todos = spyOnState(createTodosState());
+
+expect(todos.$todoInput.latestValue).toBe("")
+// this is a promise, so we must resolve
+expect(todos.$todoInput.nextValue).resolve.toBe("new value")
+
+// this will update $todoInput, and the expect will test it
+todos.updateInput("new value")
+```
+
+**Type parameters:**
+
+▪ **T**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`state` | T |
+
+**Returns:** *SpyOnState‹Unwrap‹T››*
+
+___
+
+###  stepper
+
+▸ **stepper**(`secondPerFrame`: number, `x`: number, `v`: number, `destX`: number, `k`: number, `b`: number, `precision`: number): *[number, number]*
+
+*Defined in [spring/stepper.ts:6](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/spring/stepper.ts#L6)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`secondPerFrame` | number |
+`x` | number |
+`v` | number |
+`destX` | number |
+`k` | number |
+`b` | number |
+`precision` | number |
+
+**Returns:** *[number, number]*
