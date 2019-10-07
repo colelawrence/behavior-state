@@ -159,7 +159,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:21](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/react/index.ts#L21)*
+*Defined in [react/index.ts:21](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/react/index.ts#L21)*
 
 ___
 
@@ -424,7 +424,7 @@ ___
 
 ▸ **nextPushItem**(`item`: E): *void*
 
-*Defined in [BehaviorArray.ts:11](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/BehaviorArray.ts#L11)*
+*Defined in [BehaviorArray.ts:11](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L11)*
 
 add to end of array and emit as next value
 
@@ -442,7 +442,7 @@ ___
 
 ▸ **nextRemoveItemsWhere**(`shouldRemove`: function): *void*
 
-*Defined in [BehaviorArray.ts:24](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/BehaviorArray.ts#L24)*
+*Defined in [BehaviorArray.ts:24](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L24)*
 
 Emits next value with items matching the given predicate removed.
 
@@ -468,7 +468,7 @@ ___
 
 ▸ **nextUnshiftItem**(`item`: E): *void*
 
-*Defined in [BehaviorArray.ts:16](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/BehaviorArray.ts#L16)*
+*Defined in [BehaviorArray.ts:16](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L16)*
 
 add to start of array and emit as next value
 
@@ -486,7 +486,7 @@ ___
 
 ▸ **nextUpdateItemsWhere**(`shouldUpdate`: function, `update`: function): *void*
 
-*Defined in [BehaviorArray.ts:31](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/BehaviorArray.ts#L31)*
+*Defined in [BehaviorArray.ts:31](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L31)*
 
 **Parameters:**
 
@@ -845,7 +845,7 @@ ___
 
 ▸ **retain**(`shouldKeep`: function): *void*
 
-*Defined in [BehaviorArray.ts:50](https://github.com/colelawrence/bloc-utils/blob/6b24481/src/BehaviorArray.ts#L50)*
+*Defined in [BehaviorArray.ts:50](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L50)*
 
 Emits next value with items matching the given predicate retained.
 

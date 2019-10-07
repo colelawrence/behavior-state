@@ -2,7 +2,7 @@
   "name": "behavior-state",
   "description": "Utilities for building applications with RxJS, React, Jest, and the BLoC pattern",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "yarn build-dist && yarn build-readme",
     "clean": "rm -f *.d.ts *.js *.map spring/* react/* preact/* jest/*",
