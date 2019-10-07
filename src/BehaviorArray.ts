@@ -26,7 +26,7 @@ export class BehaviorArray<E> extends Behavior<E[]> {
   }
 
   /**
-   * @param shouldUpdate return true for values that you want to update using @param update
+   * @param shouldUpdate return true for values that you want to update using @param update in the next emitted array
    */
   nextUpdateItemsWhere = (
     shouldUpdate: (item: E) => boolean,
@@ -44,10 +44,17 @@ export class BehaviorArray<E> extends Behavior<E[]> {
   };
 
   /**
-   * Emits next value with items matching the given predicate retained.
-   * @param shouldKeep return true for values that you want to keep in the array
+   * @param update each item
    */
-  retain = (shouldKeep: (item: E) => boolean) => {
+  nextUpdateItems = (update: (item: E) => E) => {
+    this.next(this.value.map(update));
+  };
+
+  /**
+   * Emits next value with items matching the given predicate retained.
+   * @param shouldKeep return true for values that you want to keep in the next emitted array
+   */
+  nextRetainItemsWhere = (shouldKeep: (item: E) => boolean) => {
     this.next(this.value.filter(shouldKeep));
   };
 }

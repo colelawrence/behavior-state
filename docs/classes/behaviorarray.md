@@ -59,10 +59,11 @@ value whenever it is subscribed to.
 * [next](behaviorarray.md#next)
 * [nextPushItem](behaviorarray.md#nextpushitem)
 * [nextRemoveItemsWhere](behaviorarray.md#nextremoveitemswhere)
+* [nextRetainItemsWhere](behaviorarray.md#nextretainitemswhere)
 * [nextUnshiftItem](behaviorarray.md#nextunshiftitem)
+* [nextUpdateItems](behaviorarray.md#nextupdateitems)
 * [nextUpdateItemsWhere](behaviorarray.md#nextupdateitemswhere)
 * [pipe](behaviorarray.md#pipe)
-* [retain](behaviorarray.md#retain)
 * [subscribe](behaviorarray.md#subscribe)
 * [toPromise](behaviorarray.md#topromise)
 * [unsubscribe](behaviorarray.md#unsubscribe)
@@ -159,7 +160,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:21](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/react/index.ts#L21)*
+*Defined in [react/index.ts:21](https://github.com/colelawrence/bloc-utils/blob/af12938/src/react/index.ts#L21)*
 
 ___
 
@@ -424,7 +425,7 @@ ___
 
 ▸ **nextPushItem**(`item`: E): *void*
 
-*Defined in [BehaviorArray.ts:11](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L11)*
+*Defined in [BehaviorArray.ts:11](https://github.com/colelawrence/bloc-utils/blob/af12938/src/BehaviorArray.ts#L11)*
 
 add to end of array and emit as next value
 
@@ -442,7 +443,7 @@ ___
 
 ▸ **nextRemoveItemsWhere**(`shouldRemove`: function): *void*
 
-*Defined in [BehaviorArray.ts:24](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L24)*
+*Defined in [BehaviorArray.ts:24](https://github.com/colelawrence/bloc-utils/blob/af12938/src/BehaviorArray.ts#L24)*
 
 Emits next value with items matching the given predicate removed.
 
@@ -464,13 +465,63 @@ Name | Type |
 
 ___
 
+###  nextRetainItemsWhere
+
+▸ **nextRetainItemsWhere**(`shouldKeep`: function): *void*
+
+*Defined in [BehaviorArray.ts:57](https://github.com/colelawrence/bloc-utils/blob/af12938/src/BehaviorArray.ts#L57)*
+
+Emits next value with items matching the given predicate retained.
+
+**Parameters:**
+
+▪ **shouldKeep**: *function*
+
+return true for values that you want to keep in the next emitted array
+
+▸ (`item`: E): *boolean*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`item` | E |
+
+**Returns:** *void*
+
+___
+
 ###  nextUnshiftItem
 
 ▸ **nextUnshiftItem**(`item`: E): *void*
 
-*Defined in [BehaviorArray.ts:16](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L16)*
+*Defined in [BehaviorArray.ts:16](https://github.com/colelawrence/bloc-utils/blob/af12938/src/BehaviorArray.ts#L16)*
 
 add to start of array and emit as next value
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`item` | E |
+
+**Returns:** *void*
+
+___
+
+###  nextUpdateItems
+
+▸ **nextUpdateItems**(`update`: function): *void*
+
+*Defined in [BehaviorArray.ts:49](https://github.com/colelawrence/bloc-utils/blob/af12938/src/BehaviorArray.ts#L49)*
+
+**Parameters:**
+
+▪ **update**: *function*
+
+each item
+
+▸ (`item`: E): *E*
 
 **Parameters:**
 
@@ -486,13 +537,13 @@ ___
 
 ▸ **nextUpdateItemsWhere**(`shouldUpdate`: function, `update`: function): *void*
 
-*Defined in [BehaviorArray.ts:31](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L31)*
+*Defined in [BehaviorArray.ts:31](https://github.com/colelawrence/bloc-utils/blob/af12938/src/BehaviorArray.ts#L31)*
 
 **Parameters:**
 
 ▪ **shouldUpdate**: *function*
 
-return true for values that you want to update using @param update
+return true for values that you want to update using @param update in the next emitted array
 
 ▸ (`item`: E): *boolean*
 
@@ -838,32 +889,6 @@ Name | Type |
 `...operations` | OperatorFunction‹any, any›[] |
 
 **Returns:** *Observable‹__type›*
-
-___
-
-###  retain
-
-▸ **retain**(`shouldKeep`: function): *void*
-
-*Defined in [BehaviorArray.ts:50](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/BehaviorArray.ts#L50)*
-
-Emits next value with items matching the given predicate retained.
-
-**Parameters:**
-
-▪ **shouldKeep**: *function*
-
-return true for values that you want to keep in the array
-
-▸ (`item`: E): *boolean*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`item` | E |
-
-**Returns:** *void*
 
 ___
 

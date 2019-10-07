@@ -68,7 +68,7 @@ value whenever it is subscribed to.
 
 *Overrides void*
 
-*Defined in [spring/BehaviorSpring.ts:32](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/spring/BehaviorSpring.ts#L32)*
+*Defined in [spring/BehaviorSpring.ts:32](https://github.com/colelawrence/bloc-utils/blob/af12938/src/spring/BehaviorSpring.ts#L32)*
 
 **Parameters:**
 
@@ -151,7 +151,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:21](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/react/index.ts#L21)*
+*Defined in [react/index.ts:21](https://github.com/colelawrence/bloc-utils/blob/af12938/src/react/index.ts#L21)*
 
 ___
 
@@ -741,7 +741,7 @@ ___
 
 ▸ **setDestination**(`newDestination`: number): *Promise‹boolean›*
 
-*Defined in [spring/BehaviorSpring.ts:72](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/spring/BehaviorSpring.ts#L72)*
+*Defined in [spring/BehaviorSpring.ts:72](https://github.com/colelawrence/bloc-utils/blob/af12938/src/spring/BehaviorSpring.ts#L72)*
 
 **Parameters:**
 
@@ -757,7 +757,7 @@ ___
 
 ▸ **setDestinationAndForget**(`newDestination`: number): *void*
 
-*Defined in [spring/BehaviorSpring.ts:82](https://github.com/colelawrence/bloc-utils/blob/a80a209/src/spring/BehaviorSpring.ts#L82)*
+*Defined in [spring/BehaviorSpring.ts:82](https://github.com/colelawrence/bloc-utils/blob/af12938/src/spring/BehaviorSpring.ts#L82)*
 
 **Parameters:**
 
