@@ -158,7 +158,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:23](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/react/index.ts#L23)*
+*Defined in [react/index.ts:23](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/react/index.ts#L23)*
 
 ___
 

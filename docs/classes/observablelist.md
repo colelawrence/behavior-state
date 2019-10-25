@@ -39,7 +39,7 @@
 
 \+ **new ObservableList**(`init?`: E[]): *[ObservableList](observablelist.md)*
 
-*Defined in [BehaviorList.ts:22](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L22)*
+*Defined in [BehaviorList.ts:22](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L22)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 • **_order**: *[BehaviorArray](behaviorarray.md)‹[Behavior](behavior.md)‹E››*
 
-*Defined in [BehaviorList.ts:22](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L22)*
+*Defined in [BehaviorList.ts:22](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L22)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **react**: *FunctionComponent‹object›*
 
-*Defined in [BehaviorList.ts:15](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L15)*
+*Defined in [BehaviorList.ts:15](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L15)*
 
 ## Methods
 
@@ -71,7 +71,7 @@ ___
 
 ▸ **mapItems**<**T**>(`mapFn`: function): *Observable‹T[]›*
 
-*Defined in [BehaviorList.ts:31](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L31)*
+*Defined in [BehaviorList.ts:31](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L31)*
 
 I get the sense that this can be heavily optimized
 

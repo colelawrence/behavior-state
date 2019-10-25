@@ -56,7 +56,7 @@ transforms using .mapItems(fn)
 
 *Inherited from [ObservableList](observablelist.md).[constructor](observablelist.md#constructor)*
 
-*Defined in [BehaviorList.ts:22](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L22)*
+*Defined in [BehaviorList.ts:22](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L22)*
 
 **Parameters:**
 
@@ -74,7 +74,7 @@ Name | Type |
 
 *Inherited from [ObservableList](observablelist.md).[_order](observablelist.md#protected-_order)*
 
-*Defined in [BehaviorList.ts:22](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L22)*
+*Defined in [BehaviorList.ts:22](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L22)*
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 *Inherited from [ObservableList](observablelist.md).[react](observablelist.md#react)*
 
-*Defined in [BehaviorList.ts:15](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L15)*
+*Defined in [BehaviorList.ts:15](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L15)*
 
 ## Methods
 
@@ -92,7 +92,7 @@ ___
 
 ▸ **asObservable**(): *Observable‹E[]›*
 
-*Defined in [BehaviorList.ts:56](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L56)*
+*Defined in [BehaviorList.ts:56](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L56)*
 
 **Returns:** *Observable‹E[]›*
 
@@ -102,7 +102,7 @@ ___
 
 ▸ **asObservableList**(): *[ObservableList](observablelist.md)‹E›*
 
-*Defined in [BehaviorList.ts:52](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L52)*
+*Defined in [BehaviorList.ts:52](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L52)*
 
 **Returns:** *[ObservableList](observablelist.md)‹E›*
 
@@ -114,7 +114,7 @@ ___
 
 *Inherited from [ObservableList](observablelist.md)*
 
-*Defined in [BehaviorList.ts:31](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L31)*
+*Defined in [BehaviorList.ts:31](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L31)*
 
 I get the sense that this can be heavily optimized
 
@@ -142,7 +142,7 @@ ___
 
 ▸ **nextPushItem**(`item`: E): *void*
 
-*Defined in [BehaviorList.ts:60](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L60)*
+*Defined in [BehaviorList.ts:60](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L60)*
 
 add to end of array and emit as next value
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **nextRemoveItemsWhere**(`shouldRemove`: function): *void*
 
-*Defined in [BehaviorList.ts:73](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L73)*
+*Defined in [BehaviorList.ts:73](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L73)*
 
 Emits next value with items matching the given predicate removed.
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **nextRetainItemsWhere**(`shouldKeep`: function): *void*
 
-*Defined in [BehaviorList.ts:104](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L104)*
+*Defined in [BehaviorList.ts:104](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L104)*
 
 Emits next value with items matching the given predicate retained.
 
@@ -212,7 +212,7 @@ ___
 
 ▸ **nextUnshiftItem**(`item`: E): *void*
 
-*Defined in [BehaviorList.ts:65](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L65)*
+*Defined in [BehaviorList.ts:65](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L65)*
 
 add to start of array and emit as next value
 
@@ -230,7 +230,7 @@ ___
 
 ▸ **nextUpdateItems**(`update`: function): *void*
 
-*Defined in [BehaviorList.ts:94](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L94)*
+*Defined in [BehaviorList.ts:94](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L94)*
 
 **Parameters:**
 
@@ -254,7 +254,7 @@ ___
 
 ▸ **nextUpdateItemsWhere**(`shouldUpdate`: function, `update`: function): *void*
 
-*Defined in [BehaviorList.ts:80](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/BehaviorList.ts#L80)*
+*Defined in [BehaviorList.ts:80](https://github.com/colelawrence/behavior-state/blob/3e438d6/src/BehaviorList.ts#L80)*
 
 **Parameters:**
 
