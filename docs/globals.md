@@ -10,8 +10,14 @@
 
 * [Behavior](classes/behavior.md)
 * [BehaviorArray](classes/behaviorarray.md)
+* [BehaviorList](classes/behaviorlist.md)
 * [BehaviorSpring](classes/behaviorspring.md)
+* [ObservableList](classes/observablelist.md)
 * [Observer](classes/observer.md)
+
+### Interfaces
+
+* [IObservableList](interfaces/iobservablelist.md)
 
 ### Type aliases
 
@@ -34,9 +40,9 @@
 
 Ƭ **ObserverProps**: *object*
 
-*Defined in [preact/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/af12938/src/preact/Observer.ts#L12)*
+*Defined in [preact/Observer.ts:12](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/preact/Observer.ts#L12)*
 
-*Defined in [react/Observer.ts:12](https://github.com/colelawrence/bloc-utils/blob/af12938/src/react/Observer.ts#L12)*
+*Defined in [react/Observer.ts:12](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/react/Observer.ts#L12)*
 
 Properties of the `<Observer .../>` component
 Properties of the `<Observer .../>` component
@@ -49,7 +55,7 @@ ___
 
 Ƭ **ProtectedState**: *object*
 
-*Defined in [seal.ts:7](https://github.com/colelawrence/bloc-utils/blob/af12938/src/seal.ts#L7)*
+*Defined in [seal.ts:7](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/seal.ts#L7)*
 
 Make all Behavior / Subject properties in T asObservable().
 The resulting ProtectedState will not allow anyone to call .next() on any Behaviors.
@@ -62,7 +68,7 @@ ___
 
 Ƭ **SealState**: *object*
 
-*Defined in [seal.ts:12](https://github.com/colelawrence/bloc-utils/blob/af12938/src/seal.ts#L12)*
+*Defined in [seal.ts:12](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/seal.ts#L12)*
 
 Strict State type which enforces that each property is either a void function, or an Observable
 
@@ -76,7 +82,7 @@ ___
 
 Ƭ **TLength**: *number | string*
 
-*Defined in [spring/CSS.ts:3](https://github.com/colelawrence/bloc-utils/blob/af12938/src/spring/CSS.ts#L3)*
+*Defined in [spring/CSS.ts:3](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/spring/CSS.ts#L3)*
 
 ## Functions
 
@@ -84,7 +90,7 @@ ___
 
 ▸ **seal**<**T**>(`state`: T): *[ProtectedState](globals.md#protectedstate)‹T›*
 
-*Defined in [seal.ts:24](https://github.com/colelawrence/bloc-utils/blob/af12938/src/seal.ts#L24)*
+*Defined in [seal.ts:24](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/seal.ts#L24)*
 
 Protects a State from exposing mutable Behaviors or Subjects, and exposes those as Observables.
 
@@ -109,7 +115,7 @@ ___
 
 ▸ **shouldStopAnimation**(`value`: number, `destination`: number, `velocity`: number): *boolean*
 
-*Defined in [spring/shouldStopAnimation.ts:1](https://github.com/colelawrence/bloc-utils/blob/af12938/src/spring/shouldStopAnimation.ts#L1)*
+*Defined in [spring/shouldStopAnimation.ts:1](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/spring/shouldStopAnimation.ts#L1)*
 
 **Parameters:**
 
@@ -127,7 +133,7 @@ ___
 
 ▸ **spyOnObservable**<**T**>(`obs`: Observable‹T›): *SpyOnObservable‹T›*
 
-*Defined in [jest/index.ts:47](https://github.com/colelawrence/bloc-utils/blob/af12938/src/jest/index.ts#L47)*
+*Defined in [jest/index.ts:47](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/jest/index.ts#L47)*
 
 **Type parameters:**
 
@@ -147,7 +153,7 @@ ___
 
 ▸ **spyOnState**<**T**>(`state`: T): *SpyOnState‹Unwrap‹T››*
 
-*Defined in [jest/index.ts:34](https://github.com/colelawrence/bloc-utils/blob/af12938/src/jest/index.ts#L34)*
+*Defined in [jest/index.ts:34](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/jest/index.ts#L34)*
 
 Test State observable values by extending each observable with
 `.nextValue: Promise<T>` and `.latestValue: T` for easier testing with `jest`
@@ -182,7 +188,7 @@ ___
 
 ▸ **stepper**(`secondPerFrame`: number, `x`: number, `v`: number, `destX`: number, `k`: number, `b`: number, `precision`: number): *[number, number]*
 
-*Defined in [spring/stepper.ts:6](https://github.com/colelawrence/bloc-utils/blob/af12938/src/spring/stepper.ts#L6)*
+*Defined in [spring/stepper.ts:6](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/spring/stepper.ts#L6)*
 
 **Parameters:**
 

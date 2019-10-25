@@ -124,7 +124,7 @@ You might also want to build something before the {@link rxjs#Observable | Obser
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:65](https://github.com/colelawrence/bloc-utils/blob/af12938/src/preact/Observer.ts#L65)*
+*Defined in [preact/Observer.ts:65](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/preact/Observer.ts#L65)*
 
 **Parameters:**
 
@@ -142,7 +142,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:119
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:119
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:118
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:118
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:117
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:117
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/@types/react/index.d.ts:459
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/@types/react/index.d.ts:459
 
 **`deprecated`** 
 https://reactjs.org/docs/refs-and-the-dom.html#legacy-api-string-refs
@@ -195,7 +195,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:116
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:116
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:105
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:105
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:103
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:103
 
 ## Methods
 
@@ -227,7 +227,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/n
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/@types/react/index.d.ts:641
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/@types/react/index.d.ts:641
 
 Called immediately before mounting occurs, and before `Component#render`.
 Avoid introducing any side-effects or subscriptions in this method.
@@ -253,7 +253,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/@types/react/index.d.ts:673
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/@types/react/index.d.ts:673
 
 Called when the component may be receiving new props.
 React may call this even if props have not changed, so be sure to compare new and existing
@@ -289,7 +289,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/@types/react/index.d.ts:701
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/@types/react/index.d.ts:701
 
 Called immediately before rendering when new props or state is received. Not called for the initial render.
 
@@ -326,7 +326,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:97
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:97
 
 **Parameters:**
 
@@ -345,7 +345,7 @@ ___
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:75](https://github.com/colelawrence/bloc-utils/blob/af12938/src/preact/Observer.ts#L75)*
+*Defined in [preact/Observer.ts:75](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/preact/Observer.ts#L75)*
 
 **Returns:** *void*
 
@@ -359,7 +359,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:96
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:96
 
 **Parameters:**
 
@@ -381,7 +381,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:88
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:88
 
 **Returns:** *void*
 
@@ -395,7 +395,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:92
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:92
 
 **Parameters:**
 
@@ -414,7 +414,7 @@ ___
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:84](https://github.com/colelawrence/bloc-utils/blob/af12938/src/preact/Observer.ts#L84)*
+*Defined in [preact/Observer.ts:84](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/preact/Observer.ts#L84)*
 
 **Returns:** *void*
 
@@ -428,7 +428,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:94
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:94
 
 **Parameters:**
 
@@ -450,7 +450,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:129
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:129
 
 **Parameters:**
 
@@ -468,7 +468,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:91
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:91
 
 **Returns:** *object*
 
@@ -482,7 +482,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:95
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:95
 
 **Parameters:**
 
@@ -501,7 +501,7 @@ ___
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:88](https://github.com/colelawrence/bloc-utils/blob/af12938/src/preact/Observer.ts#L88)*
+*Defined in [preact/Observer.ts:88](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/preact/Observer.ts#L88)*
 
 **Returns:** *Element*
 
@@ -515,7 +515,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:124
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:124
 
 **Type parameters:**
 
@@ -541,7 +541,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:93
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:93
 
 **Parameters:**
 
@@ -561,7 +561,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:114
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:114
 
 **Parameters:**
 
@@ -579,7 +579,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/bloc-utils/node_modules/preact/src/index.d.ts:113
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/preact/src/index.d.ts:113
 
 **Parameters:**
 
@@ -598,22 +598,22 @@ Name | Type |
 
 *Overrides void*
 
-*Defined in [preact/Observer.ts:62](https://github.com/colelawrence/bloc-utils/blob/af12938/src/preact/Observer.ts#L62)*
+*Defined in [preact/Observer.ts:62](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/preact/Observer.ts#L62)*
 
-*Defined in [react/Observer.ts:62](https://github.com/colelawrence/bloc-utils/blob/af12938/src/react/Observer.ts#L62)*
+*Defined in [react/Observer.ts:62](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/react/Observer.ts#L62)*
 
 ###  complete
 
 • **complete**: *NONE* =  NONE
 
-*Defined in [preact/Observer.ts:64](https://github.com/colelawrence/bloc-utils/blob/af12938/src/preact/Observer.ts#L64)*
+*Defined in [preact/Observer.ts:64](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/preact/Observer.ts#L64)*
 
-*Defined in [react/Observer.ts:64](https://github.com/colelawrence/bloc-utils/blob/af12938/src/react/Observer.ts#L64)*
+*Defined in [react/Observer.ts:64](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/react/Observer.ts#L64)*
 
 ###  init
 
 • **init**: *NONE* =  NONE
 
-*Defined in [preact/Observer.ts:63](https://github.com/colelawrence/bloc-utils/blob/af12938/src/preact/Observer.ts#L63)*
+*Defined in [preact/Observer.ts:63](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/preact/Observer.ts#L63)*
 
-*Defined in [react/Observer.ts:63](https://github.com/colelawrence/bloc-utils/blob/af12938/src/react/Observer.ts#L63)*
+*Defined in [react/Observer.ts:63](https://github.com/colelawrence/behavior-state/blob/b7cfacc/src/react/Observer.ts#L63)*
