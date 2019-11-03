@@ -7,13 +7,19 @@ import { Behavior } from "./Behavior";
  * @class BehaviorArray<E>
  */
 export class BehaviorArray<E> extends Behavior<E[]> {
-  /** add to end of array and emit as next value */
-  nextPushItem = (item: E) => {
+  /**
+   * Add item to end of array and emit as next value
+   * @notes `this` is bounded
+   */
+  nextAppendItem = (item: E) => {
     this.next([...this.value, item]);
   };
 
-  /** add to start of array and emit as next value */
-  nextUnshiftItem = (item: E) => {
+  /**
+   * Add to start of array and emit as next value
+   * @notes `this` is bounded
+   */
+  nextPrependItem = (item: E) => {
     this.next([item, ...this.value]);
   };
 
@@ -21,17 +27,25 @@ export class BehaviorArray<E> extends Behavior<E[]> {
    * Emits next value with items matching the given predicate removed.
    * @param shouldRemove return true for values that need to be removed
    */
-  nextRemoveItemsWhere(shouldRemove: (item: E) => boolean) {
+  nextRemoveItemsWhere(shouldRemove: (item: E) => boolean): void {
     this.next(this.value.filter(item => !shouldRemove(item)));
+  }
+
+  /**
+   * Emits next value with items matching the given predicate retained.
+   * @param shouldKeep return true for values that you want to keep in the next emitted array
+   */
+  nextRetainItemsWhere(shouldKeep: (item: E) => boolean): void {
+    this.next(this.value.filter(shouldKeep));
   }
 
   /**
    * @param shouldUpdate return true for values that you want to update using @param update in the next emitted array
    */
-  nextUpdateItemsWhere = (
+  nextUpdateItemsWhere(
     shouldUpdate: (item: E) => boolean,
     update: (item: E) => E
-  ) => {
+  ): void {
     this.next(
       this.value.map(item => {
         if (shouldUpdate(item)) {
@@ -41,20 +55,12 @@ export class BehaviorArray<E> extends Behavior<E[]> {
         }
       })
     );
-  };
+  }
 
   /**
    * @param update each item
    */
-  nextUpdateItems = (update: (item: E) => E) => {
+  nextUpdateItems(update: (item: E) => E): void {
     this.next(this.value.map(update));
-  };
-
-  /**
-   * Emits next value with items matching the given predicate retained.
-   * @param shouldKeep return true for values that you want to keep in the next emitted array
-   */
-  nextRetainItemsWhere = (shouldKeep: (item: E) => boolean) => {
-    this.next(this.value.filter(shouldKeep));
-  };
+  }
 }
