@@ -9,6 +9,7 @@ export * from "./Observer";
 
 /** used for caching a value for using with ReactNode.key */
 const observerKey = Symbol("Observable key")
+const observerKeyCache = Symbol("Observable key cache")
 
 export type ObserverProps<T> = {
   init?: () => React.ReactNode;
@@ -38,9 +39,10 @@ Object.defineProperty(Observable.prototype, "react", {
 
 Object.defineProperty(Observable.prototype, observerKey, {
   get<E>(this: Observable<E>) {
-    const key = Math.random()
-    this[observerKey] = key
-    return key
+    if (!this[observerKeyCache]) {
+      this[observerKeyCache] = Math.random()
+    }
+    return this[observerKeyCache]
   }
 });
 
