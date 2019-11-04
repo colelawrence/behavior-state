@@ -36,6 +36,7 @@ value whenever it is subscribed to.
 
 ### Properties
 
+* [__computed](behavior.md#__computed)
 * [_isScalar](behavior.md#_isscalar)
 * [closed](behavior.md#closed)
 * [hasError](behavior.md#haserror)
@@ -87,6 +88,16 @@ Name | Type |
 **Returns:** *[Behavior](behavior.md)*
 
 ## Properties
+
+###  __computed
+
+• **__computed**: *number*
+
+*Inherited from void*
+
+*Defined in [react/index.ts:27](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/react/index.ts#L27)*
+
+___
 
 ###  _isScalar
 
@@ -158,7 +169,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:24](https://github.com/colelawrence/behavior-state/blob/40001fc/src/react/index.ts#L24)*
+*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/react/index.ts#L28)*
 
 ___
 

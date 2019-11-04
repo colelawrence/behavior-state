@@ -32,6 +32,7 @@ value whenever it is subscribed to.
 
 ### Properties
 
+* [__computed](behaviorarray.md#__computed)
 * [_isScalar](behaviorarray.md#_isscalar)
 * [closed](behaviorarray.md#closed)
 * [hasError](behaviorarray.md#haserror)
@@ -89,6 +90,16 @@ Name | Type |
 **Returns:** *[BehaviorArray](behaviorarray.md)*
 
 ## Properties
+
+###  __computed
+
+• **__computed**: *number*
+
+*Inherited from void*
+
+*Defined in [react/index.ts:27](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/react/index.ts#L27)*
+
+___
 
 ###  _isScalar
 
@@ -160,7 +171,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:24](https://github.com/colelawrence/behavior-state/blob/40001fc/src/react/index.ts#L24)*
+*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/react/index.ts#L28)*
 
 ___
 
@@ -425,7 +436,7 @@ ___
 
 ▸ **nextAppendItem**(`item`: E): *void*
 
-*Defined in [BehaviorArray.ts:14](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorArray.ts#L14)*
+*Defined in [BehaviorArray.ts:14](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorArray.ts#L14)*
 
 Add item to end of array and emit as next value (push)
 
@@ -443,7 +454,7 @@ ___
 
 ▸ **nextPrependItem**(`item`: E): *void*
 
-*Defined in [BehaviorArray.ts:22](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorArray.ts#L22)*
+*Defined in [BehaviorArray.ts:22](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorArray.ts#L22)*
 
 Add to start of array and emit as next value (unshift)
 
@@ -461,7 +472,7 @@ ___
 
 ▸ **nextRemoveItemsWhere**(`shouldRemove`: function): *void*
 
-*Defined in [BehaviorArray.ts:30](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorArray.ts#L30)*
+*Defined in [BehaviorArray.ts:30](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorArray.ts#L30)*
 
 Emits next value with items matching the given predicate removed.
 
@@ -487,7 +498,7 @@ ___
 
 ▸ **nextRetainItemsWhere**(`shouldKeep`: function): *void*
 
-*Defined in [BehaviorArray.ts:38](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorArray.ts#L38)*
+*Defined in [BehaviorArray.ts:38](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorArray.ts#L38)*
 
 Emits next value with items matching the given predicate retained.
 
@@ -513,7 +524,7 @@ ___
 
 ▸ **nextUpdateItems**(`update`: function): *void*
 
-*Defined in [BehaviorArray.ts:63](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorArray.ts#L63)*
+*Defined in [BehaviorArray.ts:63](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorArray.ts#L63)*
 
 **Parameters:**
 
@@ -537,7 +548,7 @@ ___
 
 ▸ **nextUpdateItemsWhere**(`shouldUpdate`: function, `update`: function): *void*
 
-*Defined in [BehaviorArray.ts:45](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorArray.ts#L45)*
+*Defined in [BehaviorArray.ts:45](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorArray.ts#L45)*
 
 **Parameters:**
 

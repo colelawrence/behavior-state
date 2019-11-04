@@ -28,6 +28,7 @@ value whenever it is subscribed to.
 
 ### Properties
 
+* [__computed](behaviorspring.md#__computed)
 * [_isScalar](behaviorspring.md#_isscalar)
 * [closed](behaviorspring.md#closed)
 * [hasError](behaviorspring.md#haserror)
@@ -68,7 +69,7 @@ value whenever it is subscribed to.
 
 *Overrides void*
 
-*Defined in [spring/BehaviorSpring.ts:32](https://github.com/colelawrence/behavior-state/blob/40001fc/src/spring/BehaviorSpring.ts#L32)*
+*Defined in [spring/BehaviorSpring.ts:32](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/spring/BehaviorSpring.ts#L32)*
 
 **Parameters:**
 
@@ -80,6 +81,16 @@ Name | Type |
 **Returns:** *[BehaviorSpring](behaviorspring.md)*
 
 ## Properties
+
+###  __computed
+
+• **__computed**: *number*
+
+*Inherited from void*
+
+*Defined in [react/index.ts:27](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/react/index.ts#L27)*
+
+___
 
 ###  _isScalar
 
@@ -151,7 +162,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:24](https://github.com/colelawrence/behavior-state/blob/40001fc/src/react/index.ts#L24)*
+*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/react/index.ts#L28)*
 
 ___
 
@@ -741,7 +752,7 @@ ___
 
 ▸ **setDestination**(`newDestination`: number): *Promise‹boolean›*
 
-*Defined in [spring/BehaviorSpring.ts:72](https://github.com/colelawrence/behavior-state/blob/40001fc/src/spring/BehaviorSpring.ts#L72)*
+*Defined in [spring/BehaviorSpring.ts:72](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/spring/BehaviorSpring.ts#L72)*
 
 **Parameters:**
 
@@ -757,7 +768,7 @@ ___
 
 ▸ **setDestinationAndForget**(`newDestination`: number): *void*
 
-*Defined in [spring/BehaviorSpring.ts:82](https://github.com/colelawrence/behavior-state/blob/40001fc/src/spring/BehaviorSpring.ts#L82)*
+*Defined in [spring/BehaviorSpring.ts:82](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/spring/BehaviorSpring.ts#L82)*
 
 **Parameters:**
 
