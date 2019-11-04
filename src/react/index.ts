@@ -7,6 +7,9 @@ import { Observer } from "./Observer";
 
 export * from "./Observer";
 
+/** used for caching a value for using with ReactNode.key */
+const observerKey = Symbol("Observable key")
+
 export type ObserverProps<T> = {
   init?: () => React.ReactNode;
   complete?: () => React.ReactNode;
@@ -21,6 +24,7 @@ export type ObserverProps<T> = {
 
 declare module "rxjs" {
   class Observable<T> {
+    [observerKey]: number
     react: React.FC<ObserverProps<T>>;
   }
 }
@@ -29,6 +33,14 @@ Object.defineProperty(Observable.prototype, "react", {
   get() {
     // the scope this binding here is critical
     return props => React.createElement(Observer, { of: this, ...props });
+  }
+});
+
+Object.defineProperty(Observable.prototype, observerKey, {
+  get<E>(this: Observable<E>) {
+    const key = Math.random()
+    this[observerKey] = key
+    return key
   }
 });
 
@@ -68,7 +80,7 @@ function renderObservableList<E>(
   return React.createElement(React.Fragment, {
     children: behs.map(obs =>
       React.createElement(Observer, {
-        key: Math.random(),
+        key: obs[observerKey],
         // nextItem transforms E to a React.ReactNode
         of: obs.pipe(map(nextItem)),
         // if an observable is completed, then it is an indication that the item has been removed
