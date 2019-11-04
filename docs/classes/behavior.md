@@ -95,7 +95,7 @@ Name | Type |
 
 *Inherited from void*
 
-*Defined in [react/index.ts:27](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/react/index.ts#L27)*
+*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/react/index.ts#L28)*
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/react/index.ts#L28)*
+*Defined in [react/index.ts:29](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/react/index.ts#L29)*
 
 ___
 

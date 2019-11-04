@@ -39,7 +39,7 @@
 
 \+ **new ObservableList**(`_order`: [Behavior](behavior.md)‹[Behavior](behavior.md)‹E | ItemPlaceholders›[]›): *[ObservableList](observablelist.md)*
 
-*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorList.ts#L17)*
+*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorList.ts#L17)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 • **_order**: *[Behavior](behavior.md)‹[Behavior](behavior.md)‹E | ItemPlaceholders›[]›*
 
-*Defined in [BehaviorList.ts:29](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorList.ts#L29)*
+*Defined in [BehaviorList.ts:29](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorList.ts#L29)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **react**: *FunctionComponent*
 
-*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorList.ts#L17)*
+*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorList.ts#L17)*
 
 ## Methods
 
@@ -71,7 +71,7 @@ ___
 
 ▸ **mapItems**<**T**>(`mapFn`: function): *Observable‹T[]›*
 
-*Defined in [BehaviorList.ts:39](https://github.com/colelawrence/behavior-state/blob/419c3bd/src/BehaviorList.ts#L39)*
+*Defined in [BehaviorList.ts:39](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorList.ts#L39)*
 
 **Type parameters:**
 
