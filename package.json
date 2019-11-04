@@ -2,11 +2,11 @@
   "name": "behavior-state",
   "description": "Utilities for building applications with RxJS, React, Jest, and the BLoC pattern",
   "license": "MIT",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
-    "build": "yarn build-dist && yarn build-readme",
+    "build": "yarn clean && yarn build-dist && yarn build-readme",
     "clean": "rm -f *.d.ts *.js *.map spring/* react/* preact/* jest/*",
-    "build-dist": "yarn clean && tsc --outDir ./",
+    "build-dist": "tsc --outDir ./",
     "build-readme": "typedoc --theme markdown --mode file --hideGenerator --excludeNotExported --excludePrivate --excludeExternals --out ./docs ./src"
   },
   "main": "index.js",

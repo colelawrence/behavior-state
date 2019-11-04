@@ -1,13 +1,13 @@
 import React from "react";
 import { Observable } from "rxjs";
-import { Observer } from "./Observer";
-import { BehaviorList, ObservableList } from "../BehaviorList";
 import { map } from "rxjs/operators";
 import { Behavior } from "../Behavior";
+import { ObservableList, INIT_ITEM, REMOVED_ITEM } from "../BehaviorList";
+import { Observer } from "./Observer";
 
 export * from "./Observer";
 
-type ObserverProps<T> = {
+export type ObserverProps<T> = {
   init?: () => React.ReactNode;
   complete?: () => React.ReactNode;
 } & (T extends string | number | React.ReactNode
@@ -32,11 +32,10 @@ Object.defineProperty(Observable.prototype, "react", {
   }
 });
 
-type ObserverListProps<E> = {
+export type ObserverListProps<E> = {
+  // TODO: What does init even do in this context?
   init?: () => React.ReactNode;
-  complete?: () => React.ReactNode;
   nextItem: (item: E) => React.ReactNode;
-  nextKey: (item: E) => React.Key;
 };
 
 declare module "../BehaviorList" {
@@ -52,27 +51,30 @@ Object.defineProperty(ObservableList.prototype, "react", {
     return (props: ObserverListProps<E>) =>
       React.createElement(Observer, {
         ...props,
-        // of: this.mapItems(obs => obs.pipe(map(props.nextItem))),
-        // next(children: React.ReactNode[]) {
-        //   console.log('next', { children })
-        //   return React.createElement(React.Fragment, { children });
-        // }
         of: ofOrder,
         next: renderObservableList.bind(null, props)
       });
   }
 });
 
-const id = <A> (a: A) => a
-function renderObservableList<E>(props: ObserverListProps<E>, behs: Behavior<E>[]) {
+const id = <A>(a: A) => a;
+const none = () => null;
+function renderObservableList<E>(
+  props: ObserverListProps<E>,
+  behs: Behavior<E>[]
+) {
+  const nextItem = e =>
+    e !== INIT_ITEM && e !== REMOVED_ITEM ? props.nextItem(e) : null;
   return React.createElement(React.Fragment, {
     children: behs.map(obs =>
       React.createElement(Observer, {
-        key: props.nextKey(obs.value),
-        of: obs.pipe(map(props.nextItem)),
+        key: Math.random(),
+        // nextItem transforms E to a React.ReactNode
+        of: obs.pipe(map(nextItem)),
+        // if an observable is completed, then it is an indication that the item has been removed
+        complete: none,
         next: id
       })
     )
-  })
+  });
 }
-

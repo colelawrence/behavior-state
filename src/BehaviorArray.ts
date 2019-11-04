@@ -8,7 +8,7 @@ import { Behavior } from "./Behavior";
  */
 export class BehaviorArray<E> extends Behavior<E[]> {
   /**
-   * Add item to end of array and emit as next value
+   * Add item to end of array and emit as next value (push)
    * @notes `this` is bounded
    */
   nextAppendItem = (item: E) => {
@@ -16,7 +16,7 @@ export class BehaviorArray<E> extends Behavior<E[]> {
   };
 
   /**
-   * Add to start of array and emit as next value
+   * Add to start of array and emit as next value (unshift)
    * @notes `this` is bounded
    */
   nextPrependItem = (item: E) => {
