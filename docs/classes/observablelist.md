@@ -22,7 +22,7 @@
 
 ### Constructors
 
-* [constructor](observablelist.md#constructor)
+* [constructor](observablelist.md#protected-constructor)
 
 ### Properties
 
@@ -35,17 +35,17 @@
 
 ## Constructors
 
-###  constructor
+### `Protected` constructor
 
-\+ **new ObservableList**(`init?`: E[]): *[ObservableList](observablelist.md)*
+\+ **new ObservableList**(`_order`: [Behavior](behavior.md)‹[Behavior](behavior.md)‹E | ItemPlaceholders›[]›): *[ObservableList](observablelist.md)*
 
-*Defined in [BehaviorList.ts:21](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L21)*
+*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L17)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`init?` | E[] |
+`_order` | [Behavior](behavior.md)‹[Behavior](behavior.md)‹E \| ItemPlaceholders›[]› |
 
 **Returns:** *[ObservableList](observablelist.md)*
 
@@ -53,17 +53,17 @@ Name | Type |
 
 ### `Protected` _order
 
-• **_order**: *[BehaviorArray](behaviorarray.md)‹[Behavior](behavior.md)‹E››*
+• **_order**: *[Behavior](behavior.md)‹[Behavior](behavior.md)‹E | ItemPlaceholders›[]›*
 
-*Defined in [BehaviorList.ts:21](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L21)*
+*Defined in [BehaviorList.ts:29](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L29)*
 
 ___
 
 ###  react
 
-• **react**: *FunctionComponent‹object›*
+• **react**: *FunctionComponent*
 
-*Defined in [BehaviorList.ts:13](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L13)*
+*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L17)*
 
 ## Methods
 
@@ -71,7 +71,7 @@ ___
 
 ▸ **mapItems**<**T**>(`mapFn`: function): *Observable‹T[]›*
 
-*Defined in [BehaviorList.ts:30](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L30)*
+*Defined in [BehaviorList.ts:39](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L39)*
 
 **Type parameters:**
 

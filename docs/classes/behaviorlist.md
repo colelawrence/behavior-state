@@ -4,10 +4,10 @@
 
 # Class: BehaviorList <**E**>
 
-Almost indistinguishable from BehaviorArray, BehaviorList
-does not extend Behavior, and does not allow you to directly
-call .next(value), because it is designed for performant
-transforms using .mapItems(fn)
+Almost indistinguishable from `BehaviorArray`, `BehaviorList`
+is not an extension of `Behavior`, and does not allow you to directly
+call `.next(value)`. This enables us to provide precise update paths
+which can be listened to through `.mapItems(fn)`
 
 **`class`** BehaviorList<E>
 
@@ -54,9 +54,9 @@ transforms using .mapItems(fn)
 
 \+ **new BehaviorList**(`init?`: E[]): *[BehaviorList](behaviorlist.md)*
 
-*Inherited from [ObservableList](observablelist.md).[constructor](observablelist.md#constructor)*
+*Overrides [ObservableList](observablelist.md).[constructor](observablelist.md#protected-constructor)*
 
-*Defined in [BehaviorList.ts:21](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L21)*
+*Defined in [BehaviorList.ts:154](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L154)*
 
 **Parameters:**
 
@@ -70,21 +70,21 @@ Name | Type |
 
 ### `Protected` _order
 
-• **_order**: *[BehaviorArray](behaviorarray.md)‹[Behavior](behavior.md)‹E››*
+• **_order**: *[Behavior](behavior.md)‹[Behavior](behavior.md)‹E | ItemPlaceholders›[]›*
 
 *Inherited from [ObservableList](observablelist.md).[_order](observablelist.md#protected-_order)*
 
-*Defined in [BehaviorList.ts:21](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L21)*
+*Defined in [BehaviorList.ts:29](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L29)*
 
 ___
 
 ###  react
 
-• **react**: *FunctionComponent‹object›*
+• **react**: *FunctionComponent*
 
 *Inherited from [ObservableList](observablelist.md).[react](observablelist.md#react)*
 
-*Defined in [BehaviorList.ts:13](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L13)*
+*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L17)*
 
 ## Methods
 
@@ -92,7 +92,7 @@ ___
 
 ▸ **asObservable**(): *Observable‹E[]›*
 
-*Defined in [BehaviorList.ts:56](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L56)*
+*Defined in [BehaviorList.ts:176](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L176)*
 
 **Returns:** *Observable‹E[]›*
 
@@ -102,7 +102,7 @@ ___
 
 ▸ **asObservableList**(): *[ObservableList](observablelist.md)‹E›*
 
-*Defined in [BehaviorList.ts:51](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L51)*
+*Defined in [BehaviorList.ts:171](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L171)*
 
 **Returns:** *[ObservableList](observablelist.md)‹E›*
 
@@ -114,7 +114,7 @@ ___
 
 *Inherited from [ObservableList](observablelist.md)*
 
-*Defined in [BehaviorList.ts:30](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L30)*
+*Defined in [BehaviorList.ts:39](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L39)*
 
 **Type parameters:**
 
@@ -140,9 +140,9 @@ ___
 
 ▸ **nextAppendItem**(`item`: E): *void*
 
-*Defined in [BehaviorList.ts:61](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L61)*
+*Defined in [BehaviorList.ts:189](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L189)*
 
-add to end of array and emit as next value (push)
+Add item to end of array and emit as next value (push)
 
 **Parameters:**
 
@@ -158,9 +158,9 @@ ___
 
 ▸ **nextPrependItem**(`item`: E): *void*
 
-*Defined in [BehaviorList.ts:66](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L66)*
+*Defined in [BehaviorList.ts:206](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L206)*
 
-add to start of array and emit as next value (unshift)
+Add to start of array and emit as next value (unshift)
 
 **Parameters:**
 
@@ -176,7 +176,7 @@ ___
 
 ▸ **nextRemoveItemsWhere**(`shouldRemove`: function): *void*
 
-*Defined in [BehaviorList.ts:74](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L74)*
+*Defined in [BehaviorList.ts:216](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L216)*
 
 Emits next value with items matching the given predicate removed.
 
@@ -202,7 +202,7 @@ ___
 
 ▸ **nextRetainItemsWhere**(`shouldKeep`: function): *void*
 
-*Defined in [BehaviorList.ts:84](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L84)*
+*Defined in [BehaviorList.ts:235](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L235)*
 
 Emits next value with items matching the given predicate retained.
 
@@ -228,7 +228,7 @@ ___
 
 ▸ **nextUpdateItems**(`update`: function): *void*
 
-*Defined in [BehaviorList.ts:107](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L107)*
+*Defined in [BehaviorList.ts:268](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L268)*
 
 **Parameters:**
 
@@ -252,7 +252,7 @@ ___
 
 ▸ **nextUpdateItemsWhere**(`shouldUpdate`: function, `update`: function): *void*
 
-*Defined in [BehaviorList.ts:93](https://github.com/colelawrence/behavior-state/blob/8388a6c/src/BehaviorList.ts#L93)*
+*Defined in [BehaviorList.ts:253](https://github.com/colelawrence/behavior-state/blob/40001fc/src/BehaviorList.ts#L253)*
 
 **Parameters:**
 
