@@ -97,7 +97,7 @@ Name | Type |
 
 *Inherited from void*
 
-*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/react/index.ts#L28)*
+*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/react/index.ts#L28)*
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:29](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/react/index.ts#L29)*
+*Defined in [react/index.ts:29](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/react/index.ts#L29)*
 
 ___
 
@@ -436,7 +436,7 @@ ___
 
 ▸ **nextAppendItem**(`item`: E): *void*
 
-*Defined in [BehaviorArray.ts:14](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorArray.ts#L14)*
+*Defined in [BehaviorArray.ts:14](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorArray.ts#L14)*
 
 Add item to end of array and emit as next value (push)
 
@@ -454,7 +454,7 @@ ___
 
 ▸ **nextPrependItem**(`item`: E): *void*
 
-*Defined in [BehaviorArray.ts:22](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorArray.ts#L22)*
+*Defined in [BehaviorArray.ts:22](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorArray.ts#L22)*
 
 Add to start of array and emit as next value (unshift)
 
@@ -472,7 +472,7 @@ ___
 
 ▸ **nextRemoveItemsWhere**(`shouldRemove`: function): *void*
 
-*Defined in [BehaviorArray.ts:30](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorArray.ts#L30)*
+*Defined in [BehaviorArray.ts:30](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorArray.ts#L30)*
 
 Emits next value with items matching the given predicate removed.
 
@@ -498,7 +498,7 @@ ___
 
 ▸ **nextRetainItemsWhere**(`shouldKeep`: function): *void*
 
-*Defined in [BehaviorArray.ts:38](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorArray.ts#L38)*
+*Defined in [BehaviorArray.ts:38](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorArray.ts#L38)*
 
 Emits next value with items matching the given predicate retained.
 
@@ -524,7 +524,7 @@ ___
 
 ▸ **nextUpdateItems**(`update`: function): *void*
 
-*Defined in [BehaviorArray.ts:63](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorArray.ts#L63)*
+*Defined in [BehaviorArray.ts:63](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorArray.ts#L63)*
 
 **Parameters:**
 
@@ -548,7 +548,7 @@ ___
 
 ▸ **nextUpdateItemsWhere**(`shouldUpdate`: function, `update`: function): *void*
 
-*Defined in [BehaviorArray.ts:45](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorArray.ts#L45)*
+*Defined in [BehaviorArray.ts:45](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorArray.ts#L45)*
 
 **Parameters:**
 
@@ -858,7 +858,7 @@ Name | Type |
 
 **Returns:** *Observable‹I›*
 
-▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**, **I**>(`op1`: OperatorFunction‹E[], A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›, `op9`: OperatorFunction‹H, I›, ...`operations`: OperatorFunction‹any, any›[]): *Observable‹__type›*
+▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**, **I**>(`op1`: OperatorFunction‹E[], A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›, `op9`: OperatorFunction‹H, I›, ...`operations`: OperatorFunction‹any, any›[]): *Observable‹unknown›*
 
 *Inherited from void*
 
@@ -899,7 +899,7 @@ Name | Type |
 `op9` | OperatorFunction‹H, I› |
 `...operations` | OperatorFunction‹any, any›[] |
 
-**Returns:** *Observable‹__type›*
+**Returns:** *Observable‹unknown›*
 
 ___
 

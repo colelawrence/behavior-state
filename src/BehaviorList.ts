@@ -49,6 +49,15 @@ export class ObservableList<E> implements IObservableList<E> {
       })
     );
   };
+
+  asObservable(): Observable<E[]> {
+    return this._order.pipe(
+      flatMap(behs => {
+        if (behs.length === 0) return empty;
+        else return combineLatest(behs).pipe(FILTER_PIPE_NOT_EMPTY);
+      })
+    );
+  }
 }
 
 export const INIT_ITEM = Symbol("unallocated");
@@ -171,15 +180,6 @@ export class BehaviorList<E> extends ObservableList<E> {
   asObservableList(): ObservableList<E> {
     //@ts-ignore
     return new ObservableList(this._order);
-  }
-
-  asObservable(): Observable<E[]> {
-    return this._order.pipe(
-      flatMap(behs => {
-        if (behs.length === 0) return empty;
-        else return combineLatest(behs).pipe(FILTER_PIPE_NOT_EMPTY);
-      })
-    );
   }
 
   /**

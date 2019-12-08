@@ -2,7 +2,7 @@
   "name": "behavior-state",
   "description": "Utilities for building applications with RxJS, React, Jest, and the BLoC pattern",
   "license": "MIT",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "build": "yarn clean && yarn build-dist && yarn build-readme",
     "clean": "rm -f *.d.ts *.js *.map spring/* react/* preact/* jest/*",
@@ -30,12 +30,13 @@
     "nyc"
   ],
   "optionalDependencies": {
+    "dotjsx": "*",
     "jest": "*",
     "preact": "*",
     "react": "*"
   },
   "peerDependencies": {
-    "rxjs": "^6"
+    "rxjs": "^7.0.0-alpha"
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
@@ -44,7 +45,7 @@
     "jest": "^24",
     "preact": "^10.0.0",
     "react": "^16",
-    "rxjs": "^6",
+    "rxjs": "^7.0.0-alpha",
     "typedoc": "^0.15.0",
     "typedoc-plugin-internal-external": "^2.0.2",
     "typedoc-plugin-markdown": "^2.1.10",

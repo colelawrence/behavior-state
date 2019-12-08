@@ -69,7 +69,7 @@ value whenever it is subscribed to.
 
 *Overrides void*
 
-*Defined in [spring/BehaviorSpring.ts:32](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/spring/BehaviorSpring.ts#L32)*
+*Defined in [spring/BehaviorSpring.ts:32](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/spring/BehaviorSpring.ts#L32)*
 
 **Parameters:**
 
@@ -88,7 +88,7 @@ Name | Type |
 
 *Inherited from void*
 
-*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/react/index.ts#L28)*
+*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/react/index.ts#L28)*
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:29](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/react/index.ts#L29)*
+*Defined in [react/index.ts:29](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/react/index.ts#L29)*
 
 ___
 
@@ -703,7 +703,7 @@ Name | Type |
 
 **Returns:** *Observable‹I›*
 
-▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**, **I**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›, `op9`: OperatorFunction‹H, I›, ...`operations`: OperatorFunction‹any, any›[]): *Observable‹__type›*
+▸ **pipe**<**A**, **B**, **C**, **D**, **E**, **F**, **G**, **H**, **I**>(`op1`: OperatorFunction‹number, A›, `op2`: OperatorFunction‹A, B›, `op3`: OperatorFunction‹B, C›, `op4`: OperatorFunction‹C, D›, `op5`: OperatorFunction‹D, E›, `op6`: OperatorFunction‹E, F›, `op7`: OperatorFunction‹F, G›, `op8`: OperatorFunction‹G, H›, `op9`: OperatorFunction‹H, I›, ...`operations`: OperatorFunction‹any, any›[]): *Observable‹unknown›*
 
 *Inherited from void*
 
@@ -744,7 +744,7 @@ Name | Type |
 `op9` | OperatorFunction‹H, I› |
 `...operations` | OperatorFunction‹any, any›[] |
 
-**Returns:** *Observable‹__type›*
+**Returns:** *Observable‹unknown›*
 
 ___
 
@@ -752,7 +752,7 @@ ___
 
 ▸ **setDestination**(`newDestination`: number): *Promise‹boolean›*
 
-*Defined in [spring/BehaviorSpring.ts:72](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/spring/BehaviorSpring.ts#L72)*
+*Defined in [spring/BehaviorSpring.ts:72](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/spring/BehaviorSpring.ts#L72)*
 
 **Parameters:**
 
@@ -768,7 +768,7 @@ ___
 
 ▸ **setDestinationAndForget**(`newDestination`: number): *void*
 
-*Defined in [spring/BehaviorSpring.ts:82](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/spring/BehaviorSpring.ts#L82)*
+*Defined in [spring/BehaviorSpring.ts:82](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/spring/BehaviorSpring.ts#L82)*
 
 **Parameters:**
 

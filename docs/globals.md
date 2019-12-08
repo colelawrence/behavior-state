@@ -46,7 +46,7 @@
 
 Ƭ **ObserverListProps**: *object*
 
-*Defined in [react/index.ts:49](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/react/index.ts#L49)*
+*Defined in [react/index.ts:49](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/react/index.ts#L49)*
 
 #### Type declaration:
 
@@ -56,11 +56,11 @@ ___
 
 Ƭ **ObserverProps**: *object & T extends ReactNode ? { next?: (value: T) => ReactNode; } : { next: (value: T) => ReactNode; }*
 
-*Defined in [preact/Observer.ts:12](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/preact/Observer.ts#L12)*
+*Defined in [preact/Observer.ts:12](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/preact/Observer.ts#L12)*
 
-*Defined in [react/Observer.ts:12](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/react/Observer.ts#L12)*
+*Defined in [react/Observer.ts:12](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/react/Observer.ts#L12)*
 
-*Defined in [react/index.ts:14](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/react/index.ts#L14)*
+*Defined in [react/index.ts:14](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/react/index.ts#L14)*
 
 Properties of the `<Observer .../>` component
 Properties of the `<Observer .../>` component
@@ -71,7 +71,7 @@ ___
 
 Ƭ **ProtectedState**: *object*
 
-*Defined in [seal.ts:7](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/seal.ts#L7)*
+*Defined in [seal.ts:7](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/seal.ts#L7)*
 
 Make all Behavior / Subject properties in T asObservable().
 The resulting ProtectedState will not allow anyone to call .next() on any Behaviors.
@@ -84,7 +84,7 @@ ___
 
 Ƭ **SealState**: *object*
 
-*Defined in [seal.ts:12](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/seal.ts#L12)*
+*Defined in [seal.ts:12](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/seal.ts#L12)*
 
 Strict State type which enforces that each property is either a void function, or an Observable
 
@@ -98,7 +98,7 @@ ___
 
 Ƭ **TLength**: *number | string*
 
-*Defined in [spring/CSS.ts:3](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/spring/CSS.ts#L3)*
+*Defined in [spring/CSS.ts:3](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/spring/CSS.ts#L3)*
 
 ## Variables
 
@@ -106,7 +106,7 @@ ___
 
 • **INIT_ITEM**: *unique symbol* =  Symbol("unallocated")
 
-*Defined in [BehaviorList.ts:54](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorList.ts#L54)*
+*Defined in [BehaviorList.ts:63](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorList.ts#L63)*
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 • **REMOVED_ITEM**: *unique symbol* =  Symbol("removed")
 
-*Defined in [BehaviorList.ts:55](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/BehaviorList.ts#L55)*
+*Defined in [BehaviorList.ts:64](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorList.ts#L64)*
 
 ## Functions
 
@@ -122,7 +122,7 @@ ___
 
 ▸ **seal**<**T**>(`state`: T): *[ProtectedState](globals.md#protectedstate)‹T›*
 
-*Defined in [seal.ts:24](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/seal.ts#L24)*
+*Defined in [seal.ts:24](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/seal.ts#L24)*
 
 Protects a State from exposing mutable Behaviors or Subjects, and exposes those as Observables.
 
@@ -147,7 +147,7 @@ ___
 
 ▸ **shouldStopAnimation**(`value`: number, `destination`: number, `velocity`: number): *boolean*
 
-*Defined in [spring/shouldStopAnimation.ts:1](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/spring/shouldStopAnimation.ts#L1)*
+*Defined in [spring/shouldStopAnimation.ts:1](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/spring/shouldStopAnimation.ts#L1)*
 
 **Parameters:**
 
@@ -165,7 +165,7 @@ ___
 
 ▸ **spyOnObservable**<**T**>(`obs`: Observable‹T›): *SpyOnObservable‹T›*
 
-*Defined in [jest/index.ts:47](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/jest/index.ts#L47)*
+*Defined in [jest/index.ts:47](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/jest/index.ts#L47)*
 
 **Type parameters:**
 
@@ -185,7 +185,7 @@ ___
 
 ▸ **spyOnState**<**T**>(`state`: T): *SpyOnState‹Unwrap‹T››*
 
-*Defined in [jest/index.ts:34](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/jest/index.ts#L34)*
+*Defined in [jest/index.ts:34](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/jest/index.ts#L34)*
 
 Test State observable values by extending each observable with
 `.nextValue: Promise<T>` and `.latestValue: T` for easier testing with `jest`
@@ -220,7 +220,7 @@ ___
 
 ▸ **stepper**(`secondPerFrame`: number, `x`: number, `v`: number, `destX`: number, `k`: number, `b`: number, `precision`: number): *[number, number]*
 
-*Defined in [spring/stepper.ts:6](https://github.com/colelawrence/behavior-state/blob/3ac5a6a/src/spring/stepper.ts#L6)*
+*Defined in [spring/stepper.ts:6](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/spring/stepper.ts#L6)*
 
 **Parameters:**
 
