@@ -41,7 +41,7 @@
 
 \+ **new ObservableList**(`_order`: [Behavior](behavior.md)‹[Behavior](behavior.md)‹E | ItemPlaceholders›[]›): *[ObservableList](observablelist.md)*
 
-*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/76c61b4/src/BehaviorList.ts#L17)*
+*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/cacd576/src/BehaviorList.ts#L17)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 • **_order**: *[Behavior](behavior.md)‹[Behavior](behavior.md)‹E | ItemPlaceholders›[]›*
 
-*Defined in [BehaviorList.ts:29](https://github.com/colelawrence/behavior-state/blob/76c61b4/src/BehaviorList.ts#L29)*
+*Defined in [BehaviorList.ts:29](https://github.com/colelawrence/behavior-state/blob/cacd576/src/BehaviorList.ts#L29)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **react**: *FunctionComponent*
 
-*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/76c61b4/src/BehaviorList.ts#L17)*
+*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/cacd576/src/BehaviorList.ts#L17)*
 
 ## Methods
 
@@ -73,7 +73,7 @@ ___
 
 ▸ **asObservable**(): *Observable‹E[]›*
 
-*Defined in [BehaviorList.ts:68](https://github.com/colelawrence/behavior-state/blob/76c61b4/src/BehaviorList.ts#L68)*
+*Defined in [BehaviorList.ts:68](https://github.com/colelawrence/behavior-state/blob/cacd576/src/BehaviorList.ts#L68)*
 
 **Returns:** *Observable‹E[]›*
 
@@ -83,7 +83,7 @@ ___
 
 ▸ **map**<**T**>(`mapFn`: function): *[ObservableList](observablelist.md)‹T›*
 
-*Defined in [BehaviorList.ts:55](https://github.com/colelawrence/behavior-state/blob/76c61b4/src/BehaviorList.ts#L55)*
+*Defined in [BehaviorList.ts:55](https://github.com/colelawrence/behavior-state/blob/cacd576/src/BehaviorList.ts#L55)*
 
 enables using pipe on each item for filtering and other purposes
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **mapItems**<**T**>(`mapFn`: function): *Observable‹T[]›*
 
-*Defined in [BehaviorList.ts:40](https://github.com/colelawrence/behavior-state/blob/76c61b4/src/BehaviorList.ts#L40)*
+*Defined in [BehaviorList.ts:40](https://github.com/colelawrence/behavior-state/blob/cacd576/src/BehaviorList.ts#L40)*
 
 **Type parameters:**
 
