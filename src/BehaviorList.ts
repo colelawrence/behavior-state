@@ -28,7 +28,8 @@ export class ObservableList<E> implements IObservableList<E> {
      */
     protected _order: Behavior<Behavior<E | ItemPlaceholders>[]>
   ) {
-    if (!(_order instanceof Behavior)) {
+    if (!(_order instanceof Observable)) {
+      console.error("ObservableList constructed with incorrect type", _order);
       throw new TypeError(
         `ObservableList constructed with incorrect type: ${_order}`
       );
