@@ -32,6 +32,7 @@
 ### Methods
 
 * [asObservable](observablelist.md#asobservable)
+* [map](observablelist.md#map)
 * [mapItems](observablelist.md#mapitems)
 
 ## Constructors
@@ -40,7 +41,7 @@
 
 \+ **new ObservableList**(`_order`: [Behavior](behavior.md)‹[Behavior](behavior.md)‹E | ItemPlaceholders›[]›): *[ObservableList](observablelist.md)*
 
-*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorList.ts#L17)*
+*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/BehaviorList.ts#L17)*
 
 **Parameters:**
 
@@ -56,7 +57,7 @@ Name | Type |
 
 • **_order**: *[Behavior](behavior.md)‹[Behavior](behavior.md)‹E | ItemPlaceholders›[]›*
 
-*Defined in [BehaviorList.ts:29](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorList.ts#L29)*
+*Defined in [BehaviorList.ts:29](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/BehaviorList.ts#L29)*
 
 ___
 
@@ -64,7 +65,7 @@ ___
 
 • **react**: *FunctionComponent*
 
-*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorList.ts#L17)*
+*Defined in [BehaviorList.ts:17](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/BehaviorList.ts#L17)*
 
 ## Methods
 
@@ -72,9 +73,37 @@ ___
 
 ▸ **asObservable**(): *Observable‹E[]›*
 
-*Defined in [BehaviorList.ts:53](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorList.ts#L53)*
+*Defined in [BehaviorList.ts:67](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/BehaviorList.ts#L67)*
 
 **Returns:** *Observable‹E[]›*
+
+___
+
+###  map
+
+▸ **map**<**T**>(`mapFn`: function): *[ObservableList](observablelist.md)‹T›*
+
+*Defined in [BehaviorList.ts:54](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/BehaviorList.ts#L54)*
+
+enables using pipe on each item for filtering and other purposes
+
+**Type parameters:**
+
+▪ **T**
+
+**Parameters:**
+
+▪ **mapFn**: *function*
+
+▸ (`itemObservable`: Observable‹E›): *Observable‹T›*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`itemObservable` | Observable‹E› |
+
+**Returns:** *[ObservableList](observablelist.md)‹T›*
 
 ___
 
@@ -82,7 +111,7 @@ ___
 
 ▸ **mapItems**<**T**>(`mapFn`: function): *Observable‹T[]›*
 
-*Defined in [BehaviorList.ts:39](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/BehaviorList.ts#L39)*
+*Defined in [BehaviorList.ts:39](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/BehaviorList.ts#L39)*
 
 **Type parameters:**
 

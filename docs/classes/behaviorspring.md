@@ -38,10 +38,13 @@ value whenever it is subscribed to.
 * [react](behaviorspring.md#react)
 * [source](behaviorspring.md#source)
 * [thrownError](behaviorspring.md#thrownerror)
-* [value](behaviorspring.md#value)
 * [create](behaviorspring.md#static-create)
 * [if](behaviorspring.md#static-if)
 * [throw](behaviorspring.md#static-throw)
+
+### Accessors
+
+* [value](behaviorspring.md#value)
 
 ### Methods
 
@@ -69,7 +72,7 @@ value whenever it is subscribed to.
 
 *Overrides void*
 
-*Defined in [spring/BehaviorSpring.ts:32](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/spring/BehaviorSpring.ts#L32)*
+*Defined in [spring/BehaviorSpring.ts:32](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/spring/BehaviorSpring.ts#L32)*
 
 **Parameters:**
 
@@ -88,7 +91,7 @@ Name | Type |
 
 *Inherited from void*
 
-*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/react/index.ts#L28)*
+*Defined in [react/index.ts:28](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/react/index.ts#L28)*
 
 ___
 
@@ -98,7 +101,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:15
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:15
 
 Internal implementation detail, do not use directly.
 
@@ -110,7 +113,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:24
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:24
 
 ___
 
@@ -120,7 +123,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:26
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:26
 
 ___
 
@@ -130,7 +133,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:25
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:25
 
 ___
 
@@ -140,7 +143,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:23
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:23
 
 ___
 
@@ -150,7 +153,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:19
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:19
 
 **`deprecated`** This is an internal implementation detail, do not use.
 
@@ -162,7 +165,7 @@ ___
 
 *Inherited from void*
 
-*Defined in [react/index.ts:29](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/react/index.ts#L29)*
+*Defined in [react/index.ts:29](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/react/index.ts#L29)*
 
 ___
 
@@ -172,7 +175,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:17
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:17
 
 **`deprecated`** This is an internal implementation detail, do not use.
 
@@ -184,17 +187,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:27
-
-___
-
-###  value
-
-• **value**: *number*
-
-*Inherited from void*
-
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/BehaviorSubject.d.ts:13
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:27
 
 ___
 
@@ -206,7 +199,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:32
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:32
 
 **`nocollapse`** 
 
@@ -220,7 +213,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:71
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:71
 
 **`nocollapse`** 
 
@@ -234,11 +227,23 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:76
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:76
 
 **`nocollapse`** 
 
 **`deprecated`** In favor of throwError creation function: import { throwError } from 'rxjs';
+
+## Accessors
+
+###  value
+
+• **get value**(): *number*
+
+*Inherited from void*
+
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/BehaviorSubject.d.ts:13
+
+**Returns:** *number*
 
 ## Methods
 
@@ -250,7 +255,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-sta
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/BehaviorSubject.d.ts:15
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/BehaviorSubject.d.ts:15
 
 **`deprecated`** This is an internal implementation detail, do not use.
 
@@ -272,7 +277,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:39
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:39
 
 **`deprecated`** This is an internal implementation detail, do not use.
 
@@ -292,7 +297,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:48
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:48
 
 Creates a new Observable with this Subject as the source. You can do this
 to create customize Observer-side logic of the Subject and conceal it from
@@ -310,7 +315,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:36
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:36
 
 **Returns:** *void*
 
@@ -322,7 +327,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:35
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:35
 
 **Parameters:**
 
@@ -340,7 +345,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:64
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:64
 
 **`method`** forEach
 
@@ -373,7 +378,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/BehaviorSubject.d.ts:16
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/BehaviorSubject.d.ts:16
 
 **Returns:** *number*
 
@@ -387,7 +392,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:33
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:33
 
 **Type parameters:**
 
@@ -411,7 +416,7 @@ ___
 
 *Overrides void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/BehaviorSubject.d.ts:17
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/BehaviorSubject.d.ts:17
 
 **Parameters:**
 
@@ -429,7 +434,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:77
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:77
 
 **Returns:** *Observable‹number›*
 
@@ -437,7 +442,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-sta
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:78
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:78
 
 **Type parameters:**
 
@@ -455,7 +460,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:79
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:79
 
 **Type parameters:**
 
@@ -476,7 +481,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:80
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:80
 
 **Type parameters:**
 
@@ -500,7 +505,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:81
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:81
 
 **Type parameters:**
 
@@ -527,7 +532,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:82
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:82
 
 **Type parameters:**
 
@@ -557,7 +562,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:83
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:83
 
 **Type parameters:**
 
@@ -590,7 +595,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:84
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:84
 
 **Type parameters:**
 
@@ -626,7 +631,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:85
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:85
 
 **Type parameters:**
 
@@ -665,7 +670,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:86
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:86
 
 **Type parameters:**
 
@@ -707,7 +712,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:87
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:87
 
 **Type parameters:**
 
@@ -752,7 +757,7 @@ ___
 
 ▸ **setDestination**(`newDestination`: number): *Promise‹boolean›*
 
-*Defined in [spring/BehaviorSpring.ts:72](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/spring/BehaviorSpring.ts#L72)*
+*Defined in [spring/BehaviorSpring.ts:72](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/spring/BehaviorSpring.ts#L72)*
 
 **Parameters:**
 
@@ -768,7 +773,7 @@ ___
 
 ▸ **setDestinationAndForget**(`newDestination`: number): *void*
 
-*Defined in [spring/BehaviorSpring.ts:82](https://github.com/colelawrence/behavior-state/blob/67b1b06/src/spring/BehaviorSpring.ts#L82)*
+*Defined in [spring/BehaviorSpring.ts:82](https://github.com/colelawrence/behavior-state/blob/9130fa9/src/spring/BehaviorSpring.ts#L82)*
 
 **Parameters:**
 
@@ -786,7 +791,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:47
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:47
 
 **Parameters:**
 
@@ -800,7 +805,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:49
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:49
 
 **`deprecated`** Use an observer instead of a complete callback
 
@@ -820,7 +825,7 @@ Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-sta
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:51
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:51
 
 **`deprecated`** Use an observer instead of an error callback
 
@@ -848,7 +853,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:53
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:53
 
 **`deprecated`** Use an observer instead of a complete callback
 
@@ -876,7 +881,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:54
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:54
 
 **Parameters:**
 
@@ -914,7 +919,7 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:88
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:88
 
 **Type parameters:**
 
@@ -932,7 +937,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:89
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:89
 
 **Type parameters:**
 
@@ -951,7 +956,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Observable.d.ts:90
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Observable.d.ts:90
 
 **Type parameters:**
 
@@ -974,6 +979,6 @@ ___
 
 *Inherited from void*
 
-Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/internal/Subject.d.ts:37
+Defined in /Users/cole/Desktop/refactorordie.com/storybook/packages/behavior-state/node_modules/rxjs/dist/types/internal/Subject.d.ts:37
 
 **Returns:** *void*
