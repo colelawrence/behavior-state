@@ -33,8 +33,9 @@ declare module "rxjs" {
 Object.defineProperty(Observable.prototype, "react", {
   get() {
     // the scope this binding here is critical
-    return props => React.createElement(Observer, { of: this, ...props });
-  }
+    return (props) =>
+      React.createElement(Observer, { next: id, ...props, of: this, });
+  },
 });
 
 Object.defineProperty(Observable.prototype, observerKey, {
