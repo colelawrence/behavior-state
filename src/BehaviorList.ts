@@ -2,9 +2,9 @@ import {
   BehaviorSubject,
   combineLatest,
   MonoTypeOperatorFunction,
-  Observable
+  Observable,
 } from "rxjs";
-import { filter, flatMap } from "rxjs/operators";
+import { filter, flatMap, map } from "rxjs/operators";
 import { Behavior } from "./Behavior";
 
 // used by extenders of ObservableList
@@ -40,19 +40,33 @@ export class ObservableList<E> implements IObservableList<E> {
     mapFn: (itemObservable: Observable<E>) => Observable<T>
   ): Observable<T[]> => {
     return this._order.pipe(
-      flatMap(behs => {
+      flatMap((behs) => {
         if (behs.length === 0) return empty;
         else
           return combineLatest(
-            behs.map(beh => mapFn(beh.pipe(FILTER_PIPE_NOT_EMPTY)))
+            behs.map((beh) => mapFn(beh.pipe(FILTER_PIPE_NOT_EMPTY)))
           );
       })
     );
   };
 
+  /** enables using pipe on each item for filtering and other purposes */
+  map = <T>(
+    mapFn: (itemObservable: Observable<E>) => Observable<T>
+  ): ObservableList<T> => {
+    return new ObservableList<T>(
+      // @ts-ignore
+      this._order.pipe(
+        map((order) =>
+          order.map((item) => mapFn(item.pipe(FILTER_PIPE_NOT_EMPTY)))
+        )
+      )
+    );
+  };
+
   asObservable(): Observable<E[]> {
     return this._order.pipe(
-      flatMap(behs => {
+      flatMap((behs) => {
         if (behs.length === 0) return empty;
         else return combineLatest(behs).pipe(FILTER_PIPE_NOT_EMPTY);
       })
@@ -146,7 +160,7 @@ export class BehaviorList<E> extends ObservableList<E> {
     this.shrinkTimer = null;
 
     const capacityFree = this.capacity - this.len;
-    const kept = this._order.value.filter(beh => beh.value !== REMOVED_ITEM);
+    const kept = this._order.value.filter((beh) => beh.value !== REMOVED_ITEM);
     this._order.next(kept);
     this.len = kept.length - capacityFree;
     this.removed = 0;
@@ -168,9 +182,9 @@ export class BehaviorList<E> extends ObservableList<E> {
     );
     this.capacity = 1;
     this._order.subscribe({
-      next: items => {
+      next: (items) => {
         this.capacity = items.length;
-      }
+      },
     });
     if (init && init.length > 0) {
       this._nextAppendItems(init);
